@@ -2,6 +2,14 @@
 <form addfieldprefix="Joomla\CMS\Installation\Form\Field" addruleprefix="Joomla\CMS\Installation\Form\Rule">
 	<fieldset name="site">
 		<field
+			name="test"
+			type="editor"
+			label="INSTL_TEST_LABEL"
+			id="test"
+			default="en-GB"
+			required="true"
+		/>
+		<field
 			name="language"
 			type="installation.language"
 			label="INSTL_SELECT_LANGUAGE_TITLE"

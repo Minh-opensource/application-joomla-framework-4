@@ -13,6 +13,7 @@ use Joomla\CMS\HTML\HTMLHelper;
 use Joomla\CMS\Language\Text;
 
 /** @var \Joomla\CMS\Installation\View\Setup\HtmlView $this */
+//var_dump($this->form);
 ?>
 
 <div id="installer-view" data-page-name="setup">
@@ -25,6 +26,10 @@ use Joomla\CMS\Language\Text;
 				<div class="form-group">
 					<?php echo $this->form->getLabel('language'); ?>
 					<?php echo $this->form->getInput('language'); ?>
+				</div>
+				<div class="form-group">
+					<?php //echo $this->form->getLabel('test'); ?>
+					<?php //echo $this->form->getInput('test'); ?>
 				</div>
 				<input type="hidden" name="task" value="language.set">
 				<input type="hidden" name="format" value="json">

@@ -23,7 +23,7 @@ HTMLHelper::_('behavior.core');
 HTMLHelper::_('behavior.keepalive');
 HTMLHelper::_('behavior.formvalidator');
 HTMLHelper::_('script', 'template/js/template.js', ['version' => 'auto']);
-HTMLHelper::_('webcomponent', 'vendor/joomla-custom-elements/joomla-alert.min.js', ['version' => 'auto', 'relative' => true]);
+HTMLHelper::_('webcomponent', 'template/vendor/joomla-custom-elements/joomla-alert.min.js', ['version' => 'auto', 'relative' => true]);
 
 // Add script options
 $this->addScriptOptions('system.installation', ['url' => JRoute::_('index.php')]);
@@ -52,9 +52,9 @@ Text::script('INSTL_FTP_SETTINGS_CORRECT');
 		<style>
 		@font-face {
 			font-family: 'FontAwesome';
-			src: url("media/vendor/font-awesome/fonts/fontawesome-webfont.eot?v=4.7.0");
-			src: url("media/vendor/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") 
-			format("embedded-opentype"), url("media/vendor/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("media/vendor/font-awesome/fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("media/vendor/font-awesome/fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("media/vendor/font-awesome/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
+			src: url("template/vendor/font-awesome/fonts/fontawesome-webfont.eot?v=4.7.0");
+			src: url("template/vendor/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") 
+			format("embedded-opentype"), url("template/vendor/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("template/vendor/font-awesome/fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("template/vendor/font-awesome/fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("template/vendor/font-awesome/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
 			font-weight: normal;
 			font-style: normal; }
 		</style>
