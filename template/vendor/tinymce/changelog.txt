@@ -722,7 +722,7 @@ Version 4.2.6 (2015-09-28)
     Fixed bug where Edge wouldn't initialize the editor if a document.domain was specified.
     Fixed bug where enter key before nested images would sometimes not properly expand the previous block.
     Fixed bug where the inline toolbars wouldn't get properly hidden when blurring the editor instance.
-    Fixed bug where Edge would paste Chinese characters on some Windows 10 installations.
+    Fixed bug where Edge would paste Chinese characters on some Windows 10 alphas.
     Fixed bug where IME would loose focus on IE 11 due to the double trailing br bug fix.
     Fixed bug where the proxy url in imagetools was incorrect. Patch contributed by Wong Ho Wang.
 Version 4.2.5 (2015-08-31)

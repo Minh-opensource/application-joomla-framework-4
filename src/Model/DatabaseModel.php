@@ -1,20 +1,20 @@
 <?php
 /**
- * @package     Joomla.Installation
+ * @package     Joomla.Alpha
  * @subpackage  Model
  *
  * @copyright   Copyright (C) 2005 - 2018 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-namespace Joomla\CMS\Installation\Model;
+namespace Joomla\CMS\Alpha\Model;
 
 defined('_JEXEC') or die;
 
 use Joomla\CMS\Factory;
 use Joomla\CMS\Filesystem\File;
 use Joomla\CMS\Filesystem\Folder;
-use Joomla\CMS\Installation\Helper\DatabaseHelper;
+use Joomla\CMS\Alpha\Helper\DatabaseHelper;
 use Joomla\CMS\Installer\Installer;
 use Joomla\CMS\Language\LanguageHelper;
 use Joomla\CMS\Language\Text;
@@ -27,7 +27,7 @@ use Joomla\Utilities\ArrayHelper;
  *
  * @since  3.1
  */
-class DatabaseModel extends BaseInstallationModel
+class DatabaseModel extends BaseAlphaModel
 {
 	/**
 	 * The generated user ID.
@@ -199,7 +199,7 @@ class DatabaseModel extends BaseInstallationModel
 
 		// @TODO implement the security check
 		/**
-		$shouldCheckLocalhost = getenv('JOOMLA_INSTALLATION_DISABLE_LOCALHOST_CHECK') !== '1';
+		$shouldCheckLocalhost = getenv('JOOMLA_ALPHA_DISABLE_LOCALHOST_CHECK') !== '1';
 
 		// Per Default allowed DB Hosts
 		$localhost = array(
@@ -233,7 +233,7 @@ class DatabaseModel extends BaseInstallationModel
 					Factory::getSession()->set('remoteDbFile', $remoteDbFile);
 
 					// Get the path
-					$remoteDbPath = JPATH_INSTALLATION . '/' . $remoteDbFile;
+					$remoteDbPath = JPATH_ALPHA . '/' . $remoteDbFile;
 
 					// When the path is not writable the user needs to create the file manually
 					if (!File::write($remoteDbPath, ''))
@@ -255,7 +255,7 @@ class DatabaseModel extends BaseInstallationModel
 					return false;
 				}
 
-				if (Factory::getSession()->get('remoteDbFileWrittenByJoomla', false) === true && file_exists(JPATH_INSTALLATION . '/' . $remoteDbFile))
+				if (Factory::getSession()->get('remoteDbFileWrittenByJoomla', false) === true && file_exists(JPATH_ALPHA . '/' . $remoteDbFile))
 				{
 					// Add the general message
 					Factory::getApplication()->enqueueMessage($generalRemoteDatabaseMessage, 'warning');
@@ -265,7 +265,7 @@ class DatabaseModel extends BaseInstallationModel
 					return false;
 				}
 
-				if (Factory::getSession()->get('remoteDbFileUnwritable', false) === true && !file_exists(JPATH_INSTALLATION . '/' . $remoteDbFile))
+				if (Factory::getSession()->get('remoteDbFileUnwritable', false) === true && !file_exists(JPATH_ALPHA . '/' . $remoteDbFile))
 				{
 					// Add the general message
 					Factory::getApplication()->enqueueMessage($generalRemoteDatabaseMessage, 'warning');
@@ -745,7 +745,7 @@ class DatabaseModel extends BaseInstallationModel
 			$sample_file = 'sample_testing.sql';
 		}
 
-		$data = JPATH_INSTALLATION . '/sql/' . $type . '/' . $sample_file;
+		$data = JPATH_ALPHA . '/sql/' . $type . '/' . $sample_file;
 
 		// Attempt to import the database schema if one is chosen.
 		if ($sample_file != '')

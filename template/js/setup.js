@@ -1,11 +1,11 @@
 /**
- * @package     Joomla.Installation
+ * @package     Joomla.Alpha
  * @copyright   Copyright (C) 2005 - 2018 Open Source Matters. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
 /**
- * Method to set the language for the installation UI via AJAX
+ * Method to set the language for the alpha UI via AJAX
  *
  * @return {Boolean}
  */
@@ -78,7 +78,7 @@ Joomla.checkDbCredentials = function() {
 
 	Joomla.request({
 		method: "POST",
-		url : Joomla.installationBaseUrl + '?task=installation.dbcheck&format=json',
+		url : Joomla.alphaBaseUrl + '?task=alpha.dbcheck&format=json',
 		data: data,
 		perform: true,
 		headers: {'Content-Type': 'application/x-www-form-urlencoded'},
@@ -116,8 +116,8 @@ Joomla.checkDbCredentials = function() {
 
 (function() {
 	// Merge options from the session storage
-	if (sessionStorage && sessionStorage.getItem('installation-data')) {
-		Joomla.extend(this.options, sessionStorage.getItem('installation-data'));
+	if (sessionStorage && sessionStorage.getItem('alpha-data')) {
+		Joomla.extend(this.options, sessionStorage.getItem('alpha-data'));
 	}
 
 	Joomla.pageInit();

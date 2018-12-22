@@ -1,19 +1,19 @@
 <?php
 /**
- * @package     Joomla.Installation
+ * @package     Joomla.Alpha
  * @subpackage  Service
  *
  * @copyright   Copyright (C) 2005 - 2018 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-namespace Joomla\CMS\Installation\Service\Provider;
+namespace Joomla\CMS\Alpha\Service\Provider;
 
 defined('JPATH_PLATFORM') or die;
 
 use Joomla\CMS\Error\Renderer\JsonRenderer;
 use Joomla\CMS\Factory;
-use Joomla\CMS\Installation\Application\InstallationApplication;
+use Joomla\CMS\Alpha\Application\AlphaApplication;
 use Joomla\DI\Container;
 use Joomla\DI\ServiceProviderInterface;
 use Psr\Log\LoggerInterface;
@@ -37,10 +37,10 @@ class Application implements ServiceProviderInterface
 	public function register(Container $container)
 	{
 		$container->share(
-			InstallationApplication::class,
+			AlphaApplication::class,
 			function (Container $container)
 			{
-				$app = new InstallationApplication(null, $container->get('config'), null, $container);
+				$app = new AlphaApplication(null, $container->get('config'), null, $container);
 
 				// The session service provider needs JFactory::$application, set it if still null
 				if (Factory::$application === null)
@@ -62,7 +62,7 @@ class Application implements ServiceProviderInterface
 			JsonRenderer::class,
 			function (Container $container)
 			{
-				return new \Joomla\CMS\Installation\Error\Renderer\JsonRenderer;
+				return new \Joomla\CMS\Alpha\Error\Renderer\JsonRenderer;
 			}
 		);
 	}

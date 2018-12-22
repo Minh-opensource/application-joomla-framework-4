@@ -1,18 +1,18 @@
 <?php
 /**
- * @package     Joomla.Installation
+ * @package     Joomla.Alpha
  * @subpackage  Controller
  *
  * @copyright   Copyright (C) 2005 - 2018 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-namespace Joomla\CMS\Installation\Controller;
+namespace Joomla\CMS\Alpha\Controller;
 
 defined('_JEXEC') or die;
 
 use Joomla\CMS\Factory;
-use Joomla\CMS\Installation\Response\JsonResponse;
+use Joomla\CMS\Alpha\Response\JsonResponse;
 use Joomla\CMS\Language\Text;
 use Joomla\CMS\MVC\Controller\BaseController;
 use Joomla\CMS\Session\Session;

@@ -1,12 +1,12 @@
 /**
- * @package     Joomla.Installation
+ * @package     Joomla.Alpha
  * @copyright   Copyright (C) 2005 - 2018 Open Source Matters. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 (function() {
 	// Make sure that we have the Joomla object
 	Joomla = window.Joomla || {};
-	Joomla.installation = Joomla.installation || {};
+	Joomla.alpha = Joomla.alpha || {};
 
 	Joomla.serialiseForm = function( form ) {
 		var i, l, obj = [], elements = form.querySelectorAll( "input, select, textarea" );
@@ -144,13 +144,13 @@
 		Joomla.loadingLayer("load");
 
 		// Check for FTP credentials
-		Joomla.installation = Joomla.installation || {};
+		Joomla.alpha = Joomla.alpha || {};
 
 		// @todo FTP persistent data ?
-		// Initialize the FTP installation data
-		// if (sessionStorage && sessionStorage.getItem('installation-data')) {
+		// Initialize the FTP alpha data
+		// if (sessionStorage && sessionStorage.getItem('alpha-data')) {
 		// 	var data = sessionStorage.getItem('installData').split(',');
-		// 	Joomla.installation.data = {
+		// 	Joomla.alpha.data = {
 		// 		ftpUsername: data[0],
 		// 		ftpPassword: data[1],
 		// 		ftpHost: data[2],
@@ -163,7 +163,7 @@
 
 
 	/**
-	 * Executes the required tasks to complete site installation
+	 * Executes the required tasks to complete site alpha
 	 *
 	 * @param tasks       An array of install tasks to execute
 	 */
@@ -182,7 +182,7 @@
 
 		Joomla.request({
 			method: "POST",
-			url : Joomla.baseUrl + '?task=installation.' + task + '&format=json',
+			url : Joomla.baseUrl + '?task=alpha.' + task + '&format=json',
 			data: data,
 			perform: true,
 			onSuccess: function(response, xhr){
@@ -216,13 +216,13 @@
 		var page = document.getElementById('installer-view');
 
 		// Set the base URL
-		Joomla.baseUrl = Joomla.getOptions('system.installation').url ? Joomla.getOptions('system.installation').url.replace(/&amp;/g, '&') : 'index.php';
+		Joomla.baseUrl = Joomla.getOptions('system.alpha').url ? Joomla.getOptions('system.alpha').url.replace(/&amp;/g, '&') : 'index.php';
 
 		// Show the container
-		var container = document.getElementById('container-installation');
+		var container = document.getElementById('container-alpha');
 		if (container) {
-			Joomla.installationBaseUrl = container.getAttribute('data-base-url');
-			Joomla.installationBaseUrl += "installation/index.php"
+			Joomla.alphaBaseUrl = container.getAttribute('data-base-url');
+			Joomla.alphaBaseUrl += "alpha/index.php"
 		} else {
 			throw new Error('Javascript required to be enabled!')
 		}

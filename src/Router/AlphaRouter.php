@@ -1,12 +1,12 @@
 <?php
 /**
- * @package    Joomla.Installation
+ * @package    Joomla.Alpha
  *
  * @copyright  Copyright (C) 2005 - 2018 Open Source Matters, Inc. All rights reserved.
  * @license    GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-namespace Joomla\CMS\Installation\Router;
+namespace Joomla\CMS\Alpha\Router;
 
 defined('_JEXEC') or die;
 
@@ -18,7 +18,7 @@ use Joomla\CMS\Uri\Uri;
  *
  * @since  1.5
  */
-class InstallationRouter extends Router
+class AlphaRouter extends Router
 {
 	/**
 	 * Function to convert a route to an internal URI

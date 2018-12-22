@@ -1,19 +1,19 @@
 <?php
 /**
- * @package     Joomla.Installation
+ * @package     Joomla.Alpha
  * @subpackage  Model
  *
  * @copyright   Copyright (C) 2005 - 2018 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-namespace Joomla\CMS\Installation\Model;
+namespace Joomla\CMS\Alpha\Model;
 
 defined('_JEXEC') or die;
 
 use Joomla\CMS\Factory;
 use Joomla\CMS\Form\Form;
-use Joomla\CMS\Installation\Helper\DatabaseHelper;
+use Joomla\CMS\Alpha\Helper\DatabaseHelper;
 use Joomla\CMS\Language\LanguageHelper;
 use Joomla\CMS\Language\Text;
 use Joomla\Utilities\ArrayHelper;
@@ -23,7 +23,7 @@ use Joomla\Utilities\ArrayHelper;
  *
  * @since  3.1
  */
-class SetupModel extends BaseInstallationModel
+class SetupModel extends BaseAlphaModel
 {
 	/**
 	 * Get the current setup options from the session.
@@ -43,7 +43,7 @@ class SetupModel extends BaseInstallationModel
 	/**
 	 * Store the current setup options in the session.
 	 *
-	 * @param   array  $options  The installation options.
+	 * @param   array  $options  The alpha options.
 	 *
 	 * @return  array  An array of options from the session.
 	 *
@@ -154,7 +154,7 @@ class SetupModel extends BaseInstallationModel
 	public function getLanguages()
 	{
 		// Detect the native language.
-		$native = LanguageHelper::detectLanguage();
+		$native = '';// LanguageHelper::detectLanguage();
 
 		if (empty($native))
 		{

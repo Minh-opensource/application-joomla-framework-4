@@ -1,13 +1,13 @@
 <?php
 /**
- * @package     Joomla.Installation
+ * @package     Joomla.Alpha
  * @subpackage  Controller
  *
  * @copyright   Copyright (C) 2005 - 2018 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-namespace Joomla\CMS\Installation\Controller;
+namespace Joomla\CMS\Alpha\Controller;
 
 defined('_JEXEC') or die;
 
@@ -21,7 +21,7 @@ use Joomla\Utilities\ArrayHelper;
  *
  * @since  3.1
  */
-class InstallationController extends JSONController
+class AlphaController extends JSONController
 {
 	/**
 	 * Constructor.
@@ -58,7 +58,7 @@ class InstallationController extends JSONController
 		$r->view = 'setup';
 
 		// Check the form
-		/** @var \Joomla\CMS\Installation\Model\SetupModel $model */
+		/** @var \Joomla\CMS\Alpha\Model\SetupModel $model */
 		$model = $this->getModel('Setup');
 		if ($model->checkForm('setup') === false)
 		{
@@ -111,14 +111,14 @@ class InstallationController extends JSONController
 	{
 		$this->checkValidToken();
 
-		/** @var \Joomla\CMS\Installation\Model\SetupModel $model */
+		/** @var \Joomla\CMS\Alpha\Model\SetupModel $model */
 		$model = $this->getModel('Setup');
 		$model->checkForm('setup');
 
 		$r = new \stdClass;
 
 		// Attempt to create the database tables
-		/** @var \Joomla\CMS\Installation\Model\DatabaseModel $dbModel */
+		/** @var \Joomla\CMS\Alpha\Model\DatabaseModel $dbModel */
 		$dbModel = $this->getModel('Database');
 
 		if (!$dbModel->initialise() || !$dbModel->installCmsData())
@@ -143,7 +143,7 @@ class InstallationController extends JSONController
 		$r = new \stdClass;
 		$r->view = 'install';
 
-		/** @var \Joomla\CMS\Installation\Model\DatabaseModel $model */
+		/** @var \Joomla\CMS\Alpha\Model\DatabaseModel $model */
 		$model = $this->getModel('Database');
 
 		// Attempt to handle the old database.
@@ -178,7 +178,7 @@ class InstallationController extends JSONController
 		else
 		{
 			// Get the languages model.
-			/** @var \Joomla\CMS\Installation\Model\LanguagesModel $model */
+			/** @var \Joomla\CMS\Alpha\Model\LanguagesModel $model */
 			$model = $this->getModel('Languages');
 
 			// Install selected languages
@@ -217,7 +217,7 @@ class InstallationController extends JSONController
 		$r = new \stdClass;
 		$r->view = 'remove';
 
-		/** @var \Joomla\CMS\Installation\Model\DatabaseModel $model */
+		/** @var \Joomla\CMS\Alpha\Model\DatabaseModel $model */
 		$model = $this->getModel('Database');
 
 		// Check if the database was initialised
@@ -230,7 +230,7 @@ class InstallationController extends JSONController
 	}
 
 	/**
-	 * Delete installation folder task.
+	 * Delete alpha folder task.
 	 *
 	 * @return  void
 	 *
@@ -240,14 +240,14 @@ class InstallationController extends JSONController
 	{
 		$this->checkValidToken();
 
-		/** @var \Joomla\CMS\Installation\Model\CleanupModel $model */
+		/** @var \Joomla\CMS\Alpha\Model\CleanupModel $model */
 		$model = $this->getModel('Cleanup');
-		$success = $model->deleteInstallationFolder();
+		$success = $model->deleteAlphaFolder();
 
 		// If an error was encountered return an error.
 		if (!$success)
 		{
-			$this->app->enqueueMessage(Text::sprintf('INSTL_COMPLETE_ERROR_FOLDER_DELETE', 'installation'), 'warning');
+			$this->app->enqueueMessage(Text::sprintf('INSTL_COMPLETE_ERROR_FOLDER_DELETE', 'alpha'), 'warning');
 		}
 
 		$this->app->getSession()->destroy();

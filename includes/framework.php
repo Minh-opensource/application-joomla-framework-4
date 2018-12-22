@@ -1,6 +1,6 @@
 <?php
 /**
- * @package     Joomla.Installation
+ * @package     Joomla.Alpha
  * @subpackage  Application
  *
  * @copyright   Copyright (C) 2005 - 2018 Open Source Matters, Inc. All rights reserved.
@@ -13,15 +13,15 @@ defined('_JEXEC') or die;
  * Joomla system checks.
  */
 
-const JDEBUG = false;
+const JDEBUG = true;
 
 /*
  * Check if a configuration file already exists.
- */
+ *
 
 if (file_exists(JPATH_CONFIGURATION . '/configuration.php')
 	&& (filesize(JPATH_CONFIGURATION . '/configuration.php') > 10)
-	&& !file_exists(JPATH_INSTALLATION . '/index.php'))
+	&& !file_exists(JPATH_ALPHA . '/index.php'))
 {
 	header('Location: ../index.php');
 	exit();

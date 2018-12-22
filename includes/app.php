@@ -1,6 +1,6 @@
 <?php
 /**
- * @package     Joomla.Installation
+ * @package     Joomla.Alpha
  * @subpackage  Application
  *
  * @copyright   Copyright (C) 2005 - 2018 Open Source Matters, Inc. All rights reserved.
@@ -38,14 +38,15 @@ if (is_writable(JPATH_ADMINISTRATOR . '/logs'))
 	);
 }
 
-// Register the Installation application
-JLoader::registerNamespace('Joomla\\CMS\\Installation', JPATH_INSTALLATION . '/src', false, false, 'psr4');
+// Register the Alpha application
+JLoader::registerNamespace('Joomla\\CMS\\Alpha', JPATH_ALPHA . '/src', false, false, 'psr4');
 
-JLoader::registerAlias('JRouterInstallation', \Joomla\CMS\Installation\Router\InstallationRouter::class);
+JLoader::registerAlias('JRouterAlpha', \Joomla\CMS\Alpha\Router\AlphaRouter::class);
 
 // Get the dependency injection container
 $container = \Joomla\CMS\Factory::getContainer();
-$container->registerServiceProvider(new \Joomla\CMS\Installation\Service\Provider\Application);
+$container->registerServiceProvider(new \Joomla\CMS\Alpha\Service\Provider\Application);
+$container->registerServiceProvider(new \Joomla\CMS\Alpha\Service\Provider\Session);
 
 /*
  * Alias the session service keys to the web session service as that is the primary session backend for this application
@@ -54,12 +55,12 @@ $container->registerServiceProvider(new \Joomla\CMS\Installation\Service\Provide
  * is supported.  This includes aliases for aliased class names, and the keys for alised class names should be considered
  * deprecated to be removed when the class name alias is removed as well.
  */
-$container->alias('session.web', 'session.web.installation')
-	->alias('session', 'session.web.installation')
-	->alias('JSession', 'session.web.installation')
-	->alias(\Joomla\CMS\Session\Session::class, 'session.web.installation')
-	->alias(\Joomla\Session\Session::class, 'session.web.installation')
-	->alias(\Joomla\Session\SessionInterface::class, 'session.web.installation');
+$container->alias('session.web', 'session.web.alpha')
+	->alias('session', 'session.web.alpha')
+	->alias('JSession', 'session.web.alpha')
+	->alias(\Joomla\CMS\Session\Session::class, 'session.web.alpha')
+	->alias(\Joomla\Session\Session::class, 'session.web.alpha')
+	->alias(\Joomla\Session\SessionInterface::class, 'session.web.alpha');
 
 // Instantiate and execute the application
-$container->get(\Joomla\CMS\Installation\Application\InstallationApplication::class)->execute();
+$container->get(\Joomla\CMS\Alpha\Application\AlphaApplication::class)->execute();

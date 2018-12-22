@@ -344,7 +344,7 @@ Joomla.Modal = {
    *
    * @param {String}  newToken  The token
    *
-   * Used in Joomla Installation
+   * Used in Joomla Alpha
    */
   Joomla.replaceTokens = function (newToken) {
     if (!/^[0-9A-F]{32}$/i.test(newToken)) {
@@ -719,7 +719,7 @@ Joomla.Modal = {
    * Add Joomla! loading image layer.
    *
    * Used in: /administrator/components/com_installer/views/languages/tmpl/default.php
-   *          /installation/template/js/installation.js
+   *          /alpha/template/js/alpha.js
    *
    * @param   {String}       task           The task to do [load, show, hide] (defaults to show).
    * @param   {HTMLElement}  parentElement  The HTML element where we are appending the layer

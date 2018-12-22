@@ -1,6 +1,6 @@
 <?php
 /**
- * @package     Joomla.Installation
+ * @package     Joomla.Alpha
  * @subpackage  View
  *
  * @copyright   Copyright (C) 2005 - 2018 Open Source Matters, Inc. All rights reserved.
@@ -12,7 +12,7 @@ defined('_JEXEC') or die;
 use Joomla\CMS\HTML\HTMLHelper;
 use Joomla\CMS\Language\Text;
 
-/** @var \Joomla\CMS\Installation\View\Setup\HtmlView $this */
+/** @var \Joomla\CMS\Alpha\View\Setup\HtmlView $this */
 //var_dump($this->form);
 ?>
 

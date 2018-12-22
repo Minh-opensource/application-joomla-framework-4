@@ -1,12 +1,12 @@
 <?php
 /**
- * @package    Joomla.Installation
+ * @package    Joomla.Alpha
  *
  * @copyright  Copyright (C) 2005 - 2018 Open Source Matters, Inc. All rights reserved.
  * @license    GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-namespace Joomla\CMS\Installation\Form\Field\Installation;
+namespace Joomla\CMS\Alpha\Form\Field\Alpha;
 
 defined('JPATH_BASE') or die;
 
@@ -55,7 +55,7 @@ class SampleField extends RadioField
 		}
 
 		// Get a list of files in the search path with the given filter.
-		$files = Folder::files(JPATH_INSTALLATION . '/sql/' . $type, '^sample.*\.sql$');
+		$files = Folder::files(JPATH_ALPHA . '/sql/' . $type, '^sample.*\.sql$');
 
 		// Add option to not install sample data.
 		$options[] = HTMLHelper::_('select.option', '',

@@ -1,13 +1,13 @@
 <?php
 /**
- * @package     Joomla.Installation
+ * @package     Joomla.Alpha
  * @subpackage  Model
  *
  * @copyright   Copyright (C) 2005 - 2018 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-namespace Joomla\CMS\Installation\Model;
+namespace Joomla\CMS\Alpha\Model;
 
 defined('_JEXEC') or die;
 
@@ -29,7 +29,7 @@ use Joomla\CMS\Updater\Updater;
  *
  * @since  3.1
  */
-class LanguagesModel extends BaseInstallationModel
+class LanguagesModel extends BaseAlphaModel
 {
 	/**
 	 * @var    object  Client object.
@@ -62,7 +62,7 @@ class LanguagesModel extends BaseInstallationModel
 	protected $adminId;
 
 	/**
-	 * Constructor: Deletes the default installation config file and recreates it with the good config file.
+	 * Constructor: Deletes the default alpha config file and recreates it with the good config file.
 	 *
 	 * @since  3.1
 	 */
@@ -795,8 +795,8 @@ class LanguagesModel extends BaseInstallationModel
 		$flag = strtolower(str_replace('-', '_',  $itemLanguage->language));
 
 		// Load the native language name.
-		$installationLocalisedIni = new Language($itemLanguage->language, false);
-		$nativeLanguageName       = $installationLocalisedIni->_('INSTL_DEFAULTLANGUAGE_NATIVE_LANGUAGE_NAME');
+		$alphaLocalisedIni = new Language($itemLanguage->language, false);
+		$nativeLanguageName       = $alphaLocalisedIni->_('INSTL_DEFAULTLANGUAGE_NATIVE_LANGUAGE_NAME');
 
 		// If the local name do not exist in the translation file we use the international standard name.
 		if ($nativeLanguageName == 'INSTL_DEFAULTLANGUAGE_NATIVE_LANGUAGE_NAME')

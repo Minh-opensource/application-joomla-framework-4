@@ -1,18 +1,18 @@
 <?php
 /**
- * @package     Joomla.Installation
+ * @package     Joomla.Alpha
  * @subpackage  Model
  *
  * @copyright   Copyright (C) 2005 - 2018 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-namespace Joomla\CMS\Installation\Model;
+namespace Joomla\CMS\Alpha\Model;
 
 defined('_JEXEC') or die;
 
 use Joomla\CMS\Factory;
-use Joomla\CMS\Installation\Helper\DatabaseHelper;
+use Joomla\CMS\Alpha\Helper\DatabaseHelper;
 use Joomla\CMS\Language\Text;
 use Joomla\CMS\User\UserHelper;
 use Joomla\Registry\Registry;
@@ -23,7 +23,7 @@ use Joomla\Utilities\ArrayHelper;
  *
  * @since  3.1
  */
-class ConfigurationModel extends BaseInstallationModel
+class ConfigurationModel extends BaseAlphaModel
 {
 	/**
 	 * Method to setup the configuration file

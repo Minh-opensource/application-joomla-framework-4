@@ -1,17 +1,17 @@
 <?php
 /**
- * @package     Joomla.Installation
+ * @package     Joomla.Alpha
  * @subpackage  View
  *
  * @copyright   Copyright (C) 2005 - 2018 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-namespace Joomla\CMS\Installation\View\Preinstall;
+namespace Joomla\CMS\Alpha\View\Preinstall;
 
 defined('_JEXEC') or die;
 
-use Joomla\CMS\Installation\View\DefaultView;
+use Joomla\CMS\Alpha\View\DefaultView;
 
 /**
  * The HTML Joomla Core Install Preinstall View

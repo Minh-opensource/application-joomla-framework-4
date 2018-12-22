@@ -1,13 +1,13 @@
 <?php
 /**
- * @package     Joomla.Installation
+ * @package     Joomla.Alpha
  * @subpackage  Application
  *
  * @copyright   Copyright (C) 2005 - 2018 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-namespace Joomla\CMS\Installation\Application;
+namespace Joomla\CMS\Alpha\Application;
 
 defined('_JEXEC') or die;
 
@@ -31,11 +31,11 @@ use Joomla\Registry\Registry;
 use Joomla\Session\SessionEvent;
 
 /**
- * Joomla! Installation Application class.
+ * Joomla! Alpha Application class.
  *
  * @since  3.1
  */
-final class InstallationApplication extends CMSApplication
+final class AlphaApplication extends CMSApplication
 {
 	/**
 	 * Class constructor.
@@ -56,7 +56,7 @@ final class InstallationApplication extends CMSApplication
 	public function __construct(Input $input = null, Registry $config = null, WebClient $client = null, Container $container = null)
 	{
 		// Register the application name.
-		$this->name = 'installation';
+		$this->name = 'alpha';
 
 		// Register the client ID.
 		$this->clientId = 2;
@@ -307,7 +307,7 @@ final class InstallationApplication extends CMSApplication
 		}
 
 		// Compile the class name
-		$class = 'Joomla\\CMS\\Installation\\Controller\\' . ucfirst($controllerName) . 'Controller';
+		$class = 'Joomla\\CMS\\Alpha\\Controller\\' . ucfirst($controllerName) . 'Controller';
 
 		// Create the instance
 		$controller = new $class([], new MVCFactory('Joomla\\CMS', $this), $this, $this->input);
@@ -326,7 +326,7 @@ final class InstallationApplication extends CMSApplication
 	 */
 	public function getLocalise()
 	{
-		$xml = simplexml_load_file(JPATH_INSTALLATION . '/localise.xml');
+		$xml = simplexml_load_file(JPATH_ALPHA . '/localise.xml');
 
 		if (!$xml)
 		{
@@ -453,7 +453,7 @@ final class InstallationApplication extends CMSApplication
 			}
 			else
 			{
-				$options['language'] = LanguageHelper::detectLanguage();
+				//$options['language'] = LanguageHelper::detectLanguage();
 
 				if (empty($options['language']))
 				{
@@ -497,7 +497,7 @@ final class InstallationApplication extends CMSApplication
 	 *
 	 * @param   Document  $document  An optional document object. If omitted, the factory document is created.
 	 *
-	 * @return  InstallationApplication This method is chainable.
+	 * @return  AlphaApplication This method is chainable.
 	 *
 	 * @since   3.2
 	 */

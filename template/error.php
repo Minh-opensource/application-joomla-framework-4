@@ -1,6 +1,6 @@
 <?php
 /**
- * @package	Joomla.Installation
+ * @package	Joomla.Alpha
  *
  * @copyright  Copyright (C) 2005 - 2018 Open Source Matters, Inc. All rights reserved.
  * @license	GNU General Public License version 2 or later; see LICENSE.txt
@@ -14,15 +14,15 @@ use Joomla\CMS\Language\Text;
 /** @var JDocumentError $this */
 
 // Add Stylesheets
-HTMLHelper::_('stylesheet', 'installation/template/css/template.css', ['version' => 'auto']);
-HTMLHelper::_('stylesheet', 'installation/template/css/joomla-alert.min.css', ['version' => 'auto']);
+HTMLHelper::_('stylesheet', 'alpha/template/css/template.css', ['version' => 'auto']);
+HTMLHelper::_('stylesheet', 'alpha/template/css/joomla-alert.min.css', ['version' => 'auto']);
 
 // Add scripts
-HTMLHelper::_('script', 'installation/template/js/template.js', ['version' => 'auto']);
+HTMLHelper::_('script', 'alpha/template/js/template.js', ['version' => 'auto']);
 HTMLHelper::_('webcomponent', 'vendor/joomla-custom-elements/joomla-alert.min.js', ['version' => 'auto', 'relative' => true]);
 
 // Add script options
-$this->addScriptOptions('system.installation', ['url' => JRoute::_('index.php')]);
+$this->addScriptOptions('system.alpha', ['url' => JRoute::_('index.php')]);
 
 // Set page title
 $this->setTitle($this->error->getCode() . ' - ' . htmlspecialchars($this->error->getMessage(), ENT_QUOTES, 'UTF-8'));
@@ -58,7 +58,7 @@ $this->setMetaData('viewport', 'width=device-width, initial-scale=1');
 						<?php echo Text::_('INSTL_WARNJAVASCRIPT'); ?>
 					</noscript>
 				</div>
-				<div class="container-installation flex">
+				<div class="container-alpha flex">
 					<div class="j-install-step active">
 						<div class="j-install-step-header">
 							<span class="fa fa-exclamation" aria-hidden="true"></span> <?php echo Text::_('INSTL_ERROR'); ?>

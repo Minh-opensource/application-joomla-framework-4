@@ -1,13 +1,13 @@
 <?php
 /**
- * @package     Joomla.Installation
+ * @package     Joomla.Alpha
  * @subpackage  Model
  *
  * @copyright   Copyright (C) 2005 - 2018 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-namespace Joomla\CMS\Installation\Model;
+namespace Joomla\CMS\Alpha\Model;
 
 defined('_JEXEC') or die;
 
@@ -20,7 +20,7 @@ use Joomla\CMS\Language\Text;
  *
  * @since  4.0.0
  */
-class ChecksModel extends BaseInstallationModel
+class ChecksModel extends BaseAlphaModel
 {
 	/**
 	 * Checks the availability of the parse_ini_file and parse_ini_string functions.

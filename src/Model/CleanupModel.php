@@ -1,13 +1,13 @@
 <?php
 /**
- * @package     Joomla.Installation
+ * @package     Joomla.Alpha
  * @subpackage  Model
  *
  * @copyright   Copyright (C) 2005 - 2018 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-namespace Joomla\CMS\Installation\Model;
+namespace Joomla\CMS\Alpha\Model;
 
 defined('_JEXEC') or die;
 
@@ -19,18 +19,18 @@ use Joomla\CMS\Filesystem\Folder;
  *
  * @since  4.0.0
  */
-class CleanupModel extends BaseInstallationModel
+class CleanupModel extends BaseAlphaModel
 {
 	/**
-	 * Deletes the installation folder. Returns true on success.
+	 * Deletes the alpha folder. Returns true on success.
 	 *
 	 * @return  boolean
 	 *
 	 * @since   4.0.0
 	 */
-	public function deleteInstallationFolder()
+	public function deleteAlphaFolder()
 	{
-		$return = Folder::delete(JPATH_INSTALLATION) && (!file_exists(JPATH_ROOT . '/joomla.xml') || File::delete(JPATH_ROOT . '/joomla.xml'));
+		$return = Folder::delete(JPATH_ALPHA) && (!file_exists(JPATH_ROOT . '/joomla.xml') || File::delete(JPATH_ROOT . '/joomla.xml'));
 
 		// Rename the robots.txt.dist file if robots.txt doesn't exist
 		if ($return && !file_exists(JPATH_ROOT . '/robots.txt') && file_exists(JPATH_ROOT . '/robots.txt.dist'))

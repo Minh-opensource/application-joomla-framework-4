@@ -1,21 +1,21 @@
 <?php
 /**
- * @package     Joomla.Installation
+ * @package     Joomla.Alpha
  * @subpackage  Error
  *
  * @copyright   Copyright (C) 2005 - 2018 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-namespace Joomla\CMS\Installation\Error\Renderer;
+namespace Joomla\CMS\Alpha\Error\Renderer;
 
 defined('_JEXEC') or die;
 
 use Joomla\CMS\Error\AbstractRenderer;
-use Joomla\CMS\Installation\Response\JsonResponse;
+use Joomla\CMS\Alpha\Response\JsonResponse;
 
 /**
- * JSON error page renderer for the installation application
+ * JSON error page renderer for the alpha application
  *
  * @since  4.0
  */

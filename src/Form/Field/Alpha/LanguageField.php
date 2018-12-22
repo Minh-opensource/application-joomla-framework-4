@@ -1,22 +1,22 @@
 <?php
 /**
- * @package    Joomla.Installation
+ * @package    Joomla.Alpha
  *
  * @copyright  Copyright (C) 2005 - 2018 Open Source Matters, Inc. All rights reserved.
  * @license    GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-namespace Joomla\CMS\Installation\Form\Field\Installation;
+namespace Joomla\CMS\Alpha\Form\Field\Alpha;
 
 defined('JPATH_BASE') or die;
 
 use Joomla\CMS\Factory;
 use Joomla\CMS\Form\Field\ListField;
-use Joomla\CMS\Installation\Model\SetupModel;
+use Joomla\CMS\Alpha\Model\SetupModel;
 use Joomla\CMS\Language\LanguageHelper;
 
 /**
- * Installation Language field.
+ * Alpha Language field.
  *
  * @since  1.6
  */
@@ -42,7 +42,7 @@ class LanguageField extends ListField
 		$app = Factory::getApplication();
 
 		// Detect the native language.
-		$native = LanguageHelper::detectLanguage();
+		$native = '';//LanguageHelper::detectLanguage();
 
 		if (empty($native))
 		{

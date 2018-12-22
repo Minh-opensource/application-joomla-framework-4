@@ -1,12 +1,12 @@
 <?php
 /**
- * @package    Joomla.Installation
+ * @package    Joomla.Alpha
  *
  * @copyright  Copyright (C) 2005 - 2018 Open Source Matters, Inc. All rights reserved.
  * @license    GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-namespace Joomla\CMS\Installation\Helper;
+namespace Joomla\CMS\Alpha\Helper;
 
 defined('_JEXEC') or die;
 
@@ -14,7 +14,7 @@ use Joomla\Database\DatabaseDriver;
 use Joomla\Database\DatabaseInterface;
 
 /**
- * Joomla Installation Database Helper Class.
+ * Joomla Alpha Database Helper Class.
  *
  * @since  1.6
  */

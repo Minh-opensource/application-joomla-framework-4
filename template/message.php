@@ -54,7 +54,7 @@ class JDocumentRendererHtmlMessage extends JDocumentRenderer
 			return renderMessage($msgList);
 		}
 
-		return JLayoutHelper::render('installation.template.html.system.message', $displayData);
+		return JLayoutHelper::render('alpha.template.html.system.message', $displayData);
 	}
 
 	/**

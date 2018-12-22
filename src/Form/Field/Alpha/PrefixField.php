@@ -1,12 +1,12 @@
 <?php
 /**
- * @package    Joomla.Installation
+ * @package    Joomla.Alpha
  *
  * @copyright  Copyright (C) 2005 - 2018 Open Source Matters, Inc. All rights reserved.
  * @license    GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-namespace Joomla\CMS\Installation\Form\Field\Installation;
+namespace Joomla\CMS\Alpha\Form\Field\Alpha;
 
 defined('JPATH_BASE') or die;
 

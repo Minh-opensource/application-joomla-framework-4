@@ -1,13 +1,13 @@
 <?php
 /**
- * @package     Joomla.Installation
+ * @package     Joomla.Alpha
  * @subpackage  Controller
  *
  * @copyright   Copyright (C) 2005 - 2018 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-namespace Joomla\CMS\Installation\Controller;
+namespace Joomla\CMS\Alpha\Controller;
 
 defined('_JEXEC') or die;
 
@@ -55,7 +55,7 @@ class TestController extends BaseController
 		// If the app has already been installed, default to the remove view
 		if (file_exists(JPATH_CONFIGURATION . '/configuration.php')
 			&& filesize(JPATH_CONFIGURATION . '/configuration.php') > 10
-			&& file_exists(JPATH_INSTALLATION . '/index.php'))
+			&& file_exists(JPATH_ALPHA . '/index.php'))
 		{
 			$defaultView = 'remove';
 		}

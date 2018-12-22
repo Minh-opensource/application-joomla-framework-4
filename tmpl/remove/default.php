@@ -1,6 +1,6 @@
 <?php
 /**
- * @package    Joomla.Installation
+ * @package    Joomla.Alpha
  *
  * @copyright  Copyright (C) 2005 - 2018 Open Source Matters, Inc. All rights reserved.
  * @license    GNU General Public License version 2 or later; see LICENSE.txt
@@ -11,7 +11,7 @@ defined('_JEXEC') or die;
 use Joomla\CMS\HTML\HTMLHelper;
 use Joomla\CMS\Language\Text;
 
-/** @var \Joomla\CMS\Installation\View\Remove\HtmlView $this */
+/** @var \Joomla\CMS\Alpha\View\Remove\HtmlView $this */
 ?>
 <div id="installer-view" data-page-name="remove">
 

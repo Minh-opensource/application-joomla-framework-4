@@ -1,14 +1,14 @@
 /**
- * @package     Joomla.Installation
+ * @package     Joomla.Alpha
  * @copyright   Copyright (C) 2005 - 2018 Open Source Matters. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 Joomla = window.Joomla || {};
 
 // @TODO FTP???
-Joomla.installation = Joomla.installation || {};
-// Initialize the installation data
-Joomla.installation.data = {
+Joomla.alpha = Joomla.alpha || {};
+// Initialize the alpha data
+Joomla.alpha.data = {
 	// FTP
 	ftpUsername: "",
 	ftpPassword: "",
@@ -22,7 +22,7 @@ Joomla.installation.data = {
  *
  * @param el  The page element requesting the event
  */
-Joomla.installation.detectFtpRoot = function(el) {
+Joomla.alpha.detectFtpRoot = function(el) {
 	var data, task, form = document.getElementById('ftpForm');
 
 	data = Joomla.serialiseForm(form); //'format: json&' +
@@ -31,7 +31,7 @@ Joomla.installation.detectFtpRoot = function(el) {
 
 	Joomla.request({
 		type: "POST",
-		url : Joomla.installationBaseUrl + '?task=' + task + '&format=json',
+		url : Joomla.alphaBaseUrl + '?task=' + task + '&format=json',
 		data: data,
 		perform: true,
 		headers: {'Content-Type': 'application/x-www-form-urlencoded'},
@@ -82,14 +82,14 @@ if (document.getElementById('verifybutton')) {
 		//onclick="Install.verifyFtpSettings(this);"
 		var ftpForm = document.getElementById('ftpForm');
 		if (ftpForm) {
-			Joomla.installation.data.ftpUsername = document.getElementById('jform_ftp_user').value;
-			Joomla.installation.data.ftpPassword = document.getElementById('jform_ftp_pass').value;
-			Joomla.installation.data.ftpHost = document.getElementById('jform_ftp_host').value;
-			Joomla.installation.data.ftpPort = document.getElementById('jform_ftp_port').value;
+			Joomla.alpha.data.ftpUsername = document.getElementById('jform_ftp_user').value;
+			Joomla.alpha.data.ftpPassword = document.getElementById('jform_ftp_pass').value;
+			Joomla.alpha.data.ftpHost = document.getElementById('jform_ftp_host').value;
+			Joomla.alpha.data.ftpPort = document.getElementById('jform_ftp_port').value;
 
 			var p, data = [];
-			for(p in Joomla.installation.data) {
-				data.push(Joomla.installation.data[p])
+			for(p in Joomla.alpha.data) {
+				data.push(Joomla.alpha.data[p])
 			}
 			sessionStorage.setItem('installData', JSON.stringify(data));
 			// get it back: JSON.parse(sessionStorage.installData)

@@ -1,10 +1,10 @@
 /**
- * @package     Joomla.Installation
+ * @package     Joomla.Alpha
  * @copyright   Copyright (C) 2005 - 2018 Open Source Matters. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 // Init on dom content loaded event
-var url = Joomla.getOptions('system.installation').url ? Joomla.getOptions('system.installation').url.replace(/&amp;/g, '&') : 'index.php';
+var url = Joomla.getOptions('system.alpha').url ? Joomla.getOptions('system.alpha').url.replace(/&amp;/g, '&') : 'index.php';
 
 if (document.getElementById('installAddFeatures')) {
 	document.getElementById('installAddFeatures').addEventListener('click', function(e) {

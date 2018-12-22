@@ -1,6 +1,6 @@
 <?php
 /**
- * @package	Joomla.Installation
+ * @package	Joomla.Alpha
  *
  * @copyright  Copyright (C) 2005 - 2018 Open Source Matters, Inc. All rights reserved.
  * @license	GNU General Public License version 2 or later; see LICENSE.txt
@@ -26,7 +26,7 @@ HTMLHelper::_('script', 'template/js/template.js', ['version' => 'auto']);
 HTMLHelper::_('webcomponent', 'template/vendor/joomla-custom-elements/joomla-alert.min.js', ['version' => 'auto', 'relative' => true]);
 
 // Add script options
-$this->addScriptOptions('system.installation', ['url' => JRoute::_('index.php')]);
+$this->addScriptOptions('system.alpha', ['url' => JRoute::_('index.php')]);
 
 // Load JavaScript message titles
 Text::script('ERROR');
@@ -83,7 +83,7 @@ Text::script('INSTL_FTP_SETTINGS_CORRECT');
 						<?php echo Text::_('INSTL_WARNJAVASCRIPT'); ?>
 					</noscript>
 				</div>
-				<div id="container-installation" class="container-installation flex no-js" data-base-url="<?php echo JUri::root(); ?>" style="display:none">
+				<div id="container-alpha" class="container-alpha flex no-js" data-base-url="<?php echo JUri::root(); ?>" style="display:none">
 					<jdoc:include type="component" />
 				</div>
 			</main>
