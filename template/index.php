@@ -19,11 +19,11 @@ HTMLHelper::_('stylesheet', 'template' . ($this->direction === 'rtl' ? '-rtl' : 
 HTMLHelper::_('stylesheet', 'template/css/joomla-alert.min.css', ['version' => 'auto']);
 
 // Add scripts
-HTMLHelper::_('behavior.core');
-HTMLHelper::_('behavior.keepalive');
-HTMLHelper::_('behavior.formvalidator');
-HTMLHelper::_('script', 'template/js/template.js', ['version' => 'auto']);
-HTMLHelper::_('webcomponent', 'template/vendor/joomla-custom-elements/joomla-alert.min.js', ['version' => 'auto', 'relative' => true]);
+//HTMLHelper::_('behavior.core');
+//HTMLHelper::_('behavior.keepalive');
+//HTMLHelper::_('behavior.formvalidator');
+//HTMLHelper::_('script', 'template/js/template.js', ['version' => 'auto']);
+//HTMLHelper::_('webcomponent', 'template/vendor/joomla-custom-elements/joomla-alert.min.js', ['version' => 'auto', 'relative' => true]);
 
 // Add script options
 $this->addScriptOptions('system.alpha', ['url' => JRoute::_('index.php')]);

@@ -39,7 +39,7 @@ if (is_writable(JPATH_ADMINISTRATOR . '/logs'))
 }
 
 // Register the Alpha application
-JLoader::registerNamespace('Joomla\\CMS\\Alpha', JPATH_ALPHA . '/src', false, false, 'psr4');
+JLoader::registerNamespace('Joomla\\CMS\\Alpha', JPATH_ALPHA . '/application', false, false, 'psr4');
 
 JLoader::registerAlias('JRouterAlpha', \Joomla\CMS\Alpha\Router\AlphaRouter::class);
 
@@ -47,6 +47,7 @@ JLoader::registerAlias('JRouterAlpha', \Joomla\CMS\Alpha\Router\AlphaRouter::cla
 $container = \Joomla\CMS\Factory::getContainer();
 $container->registerServiceProvider(new \Joomla\CMS\Alpha\Service\Provider\Application);
 $container->registerServiceProvider(new \Joomla\CMS\Alpha\Service\Provider\Session);
+//$container->registerServiceProvider(new \Joomla\CMS\Alpha\Service\Provider\WebAsset);
 
 /*
  * Alias the session service keys to the web session service as that is the primary session backend for this application
@@ -61,6 +62,7 @@ $container->alias('session.web', 'session.web.alpha')
 	->alias(\Joomla\CMS\Session\Session::class, 'session.web.alpha')
 	->alias(\Joomla\Session\Session::class, 'session.web.alpha')
 	->alias(\Joomla\Session\SessionInterface::class, 'session.web.alpha');
+	//->alias('webasset', 'webasset.alpha');
 
 // Instantiate and execute the application
 $container->get(\Joomla\CMS\Alpha\Application\AlphaApplication::class)->execute();
