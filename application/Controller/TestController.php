@@ -130,6 +130,6 @@ class TestController extends BaseController
 		echo '<h2>GET</h2>';
 		var_dump($_GET);
 		
-		die();
+		jexit();
 	}
 }

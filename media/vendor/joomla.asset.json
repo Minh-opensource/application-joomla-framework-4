@@ -10,10 +10,10 @@
       "version": "1.1.1",
       "dependencies": [],
       "js": [
-        "template/vendor/awesomplete/js/awesomplete.min.js"
+        "media/vendor/awesomplete/js/awesomplete.min.js"
       ],
       "css": [
-        "template/vendor/awesomplete/css/awesomplete.css"
+        "media/vendor/awesomplete/css/awesomplete.css"
       ],
       "attribute": {}
     },
@@ -25,7 +25,7 @@
         "jquery"
       ],
       "js": [
-        "template/vendor/bootstrap/js/bootstrap.min.js"
+        "media/vendor/bootstrap/js/bootstrap.min.js"
       ],
       "css": [],
       "attribute": {}
@@ -38,7 +38,7 @@
         "jquery"
       ],
       "js": [
-        "template/vendor/bootstrap/js/bootstrap.bundle.min.js"
+        "media/vendor/bootstrap/js/bootstrap.bundle.min.js"
       ],
       "css": [],
       "attribute": {}
@@ -50,7 +50,7 @@
       "dependencies": [],
       "js": [],
       "css": [
-        "template/vendor/bootstrap/css/bootstrap.min.css"
+        "media/vendor/bootstrap/css/bootstrap.min.css"
       ],
       "attribute": {}
     },
@@ -63,7 +63,7 @@
       ],
       "js": [],
       "css": [
-        "template/vendor/bootstrap/css/bootstrap-grid.min.css"
+        "media/vendor/bootstrap/css/bootstrap-grid.min.css"
       ],
       "attribute": {}
     },
@@ -73,10 +73,10 @@
       "version": "1.2.2",
       "dependencies": [],
       "js": [
-        "template/vendor/cropperjs/js/cropper.min.js"
+        "media/vendor/cropperjs/js/cropper.min.js"
       ],
       "css": [
-        "template/vendor/cropperjs/css/cropper.min.css"
+        "media/vendor/cropperjs/css/cropper.min.css"
       ],
       "attribute": {}
     },
@@ -86,10 +86,10 @@
       "version": "3.0.4",
       "dependencies": [],
       "js": [
-        "template/vendor/choicesjs/js/choices.min.js"
+        "media/vendor/choicesjs/js/choices.min.js"
       ],
       "css": [
-        "template/vendor/choicesjs/css/choices.min.css"
+        "media/vendor/choicesjs/css/choices.min.css"
       ],
       "attribute": {}
     },
@@ -99,7 +99,7 @@
       "version": "3.4.0",
       "dependencies": [],
       "js": [
-        "template/vendor/diff/js/diff.js"
+        "media/vendor/diff/js/diff.js"
       ],
       "css": [],
       "attribute": {}
@@ -110,10 +110,10 @@
       "version": "3.7.2",
       "dependencies": [],
       "js": [
-        "template/vendor/dragula/js/dragula.min.js"
+        "media/vendor/dragula/js/dragula.min.js"
       ],
       "css": [
-        "template/vendor/dragula/css/dragula.min.css"
+        "media/vendor/dragula/css/dragula.min.css"
       ],
       "attribute": {}
     },
@@ -123,7 +123,7 @@
       "version": "4.1.5",
       "dependencies": [],
       "js": [
-        "template/vendor/focus-visible/js/focus-visible.min.js"
+        "media/vendor/focus-visible/js/focus-visible.min.js"
       ],
       "css": [],
       "attribute": {}
@@ -135,7 +135,7 @@
       "dependencies": [],
       "js": [],
       "css": [
-        "template/vendor/font-awesome/css/font-awesome.min.css"
+        "media/vendor/font-awesome/css/font-awesome.min.css"
       ],
       "attribute": {}
     },
@@ -145,7 +145,7 @@
       "version": "3.3.1",
       "dependencies": [],
       "js": [
-        "template/vendor/jquery/js/jquery.min.js"
+        "media/vendor/jquery/js/jquery.min.js"
       ],
       "css": [],
       "attribute": {}
@@ -158,7 +158,7 @@
         "jquery"
       ],
       "js": [
-        "template/vendor/jquery-migrate/js/jquery-migrate.min.js"
+        "media/vendor/jquery-migrate/js/jquery-migrate.min.js"
       ],
       "css": [],
       "attribute": {}
@@ -169,7 +169,7 @@
       "version": "1.4.1",
       "dependencies": [],
       "js": [
-        "template/vendor/punycode/js/punycode.js"
+        "media/vendor/punycode/js/punycode.js"
       ],
       "css": [],
       "attribute": {}
@@ -182,10 +182,10 @@
         "jquery"
       ],
       "js": [
-        "template/vendor/minicolors/js/jquery.minicolors.min.js"
+        "media/vendor/minicolors/js/jquery.minicolors.min.js"
       ],
       "css": [
-        "template/vendor/minicolors/css/jquery.minicolors.css"
+        "media/vendor/minicolors/css/jquery.minicolors.css"
       ],
       "attribute": {}
     },
@@ -195,7 +195,7 @@
       "version": "1.10.0",
       "dependencies": [],
       "js": [
-        "template/vendor/css-vars-ponyfill/js/css-vars-ponyfill.min.js"
+        "media/vendor/css-vars-ponyfill/js/css-vars-ponyfill.min.js"
       ],
       "css": [],
       "attribute": {}
@@ -208,10 +208,10 @@
         "jquery"
       ],
       "js": [
-        "template/vendor/chosen/js/chosen.jquery.js"
+        "media/vendor/chosen/js/chosen.jquery.js"
       ],
       "css": [
-        "template/vendor/chosen/css/chosen.css"
+        "media/vendor/chosen/css/chosen.css"
       ],
       "attribute": {}
     }

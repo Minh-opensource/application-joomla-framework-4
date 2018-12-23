@@ -7,7 +7,7 @@
     "core": {
       "name": "core",
       "js": [
-        "template/system/core.min.js"
+        "media/system/js/core.min.js"
       ]
     },
     "keepalive": {
@@ -16,7 +16,7 @@
         "core"
       ],
       "js": [
-        "template/system/keepalive.min.js"
+        "media/system/js/keepalive.min.js"
       ]
     },
     "multiselect": {
@@ -25,7 +25,7 @@
         "core"
       ],
       "js": [
-        "template/system/multiselect.min.js"
+        "media/system/js/multiselect.min.js"
       ]
     },
     "searchtools": {
@@ -34,7 +34,7 @@
         "core"
       ],
       "js": [
-        "template/system/searchtools.min.js"
+        "media/system/js/searchtools.min.js"
       ]
     },
     "showon": {
@@ -43,7 +43,7 @@
         "core"
       ],
       "js": [
-        "template/system/showon.min.js"
+        "media/system/js/showon.min.js"
       ]
     },
     "fields.validate": {
@@ -53,7 +53,7 @@
         "punycode"
       ],
       "js": [
-        "template/system/fields/validate.min.js"
+        "media/system/js/fields/validate.min.js"
       ]
     }
   }

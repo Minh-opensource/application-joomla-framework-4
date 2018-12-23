@@ -49,15 +49,6 @@ Text::script('INSTL_FTP_SETTINGS_CORRECT');
 <html lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
 	<head>
 		<jdoc:include type="metas" />
-		<style>
-		@font-face {
-			font-family: 'FontAwesome';
-			src: url("template/vendor/font-awesome/fonts/fontawesome-webfont.eot?v=4.7.0");
-			src: url("template/vendor/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") 
-			format("embedded-opentype"), url("template/vendor/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("template/vendor/font-awesome/fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("template/vendor/font-awesome/fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("template/vendor/font-awesome/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
-			font-weight: normal;
-			font-style: normal; }
-		</style>
 		<jdoc:include type="styles" />
 	</head>
 	<body data-basepath="<?php echo JUri::root(true); ?>">
@@ -83,7 +74,7 @@ Text::script('INSTL_FTP_SETTINGS_CORRECT');
 						<?php echo Text::_('INSTL_WARNJAVASCRIPT'); ?>
 					</noscript>
 				</div>
-				<div id="container-alpha" class="container-alpha flex no-js" data-base-url="<?php echo JUri::root(); ?>" style="display:none">
+				<div id="container-alpha" class="container-alpha flex no-js" data-base-url="<?php echo JUri::root(); ?>" style="">
 					<jdoc:include type="component" />
 				</div>
 			</main>

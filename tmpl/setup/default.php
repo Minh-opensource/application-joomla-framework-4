@@ -15,6 +15,7 @@ use Joomla\CMS\Language\Text;
 /** @var \Joomla\CMS\Alpha\View\Setup\HtmlView $this */
 //var_dump($this->form);
 ?>
+it workssssss
 
 <div id="installer-view" data-page-name="setup">
 	<form action="index.php" method="post" id="languageForm" class="lang-select">
