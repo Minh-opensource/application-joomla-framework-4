@@ -212,7 +212,7 @@ final class AlphaApplication extends CMSApplication
 		$this->getDocument()->setBuffer($contents, 'component');
 
 		// Set the document title
-		$document->setTitle(Text::_('INSTL_PAGE_TITLE'));
+		$document->setTitle(Text::_('TXT_PAGE_TITLE'));
 	}
 
 	/**
@@ -298,7 +298,7 @@ final class AlphaApplication extends CMSApplication
 		$task = $this->input->get('task');
 
 		// The name of the controller
-		$controllerName = 'display';
+		$controllerName = 'default';
 
 		// Parse task in format controller.task
 		if ($task)

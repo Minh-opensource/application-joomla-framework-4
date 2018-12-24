@@ -16,18 +16,6 @@ defined('_JEXEC') or die;
 const JDEBUG = true;
 
 /*
- * Check if a configuration file already exists.
- *
-
-if (file_exists(JPATH_CONFIGURATION . '/configuration.php')
-	&& (filesize(JPATH_CONFIGURATION . '/configuration.php') > 10)
-	&& !file_exists(JPATH_ALPHA . '/index.php'))
-{
-	header('Location: ../index.php');
-	exit();
-}
-
-/*
  * Joomla system startup.
  */
 

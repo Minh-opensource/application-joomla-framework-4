@@ -59,7 +59,7 @@ class SampleField extends RadioField
 
 		// Add option to not install sample data.
 		$options[] = HTMLHelper::_('select.option', '',
-			HTMLHelper::_('tooltip', Text::_('INSTL_SITE_INSTALL_SAMPLE_NONE_DESC'), '', '', Text::_('JNO'))
+			HTMLHelper::_('tooltip', Text::_('TXT_SITE_INSTALL_SAMPLE_NONE_DESC'), '', '', Text::_('JNO'))
 		);
 
 		// Build the options list from the list of files.
@@ -67,8 +67,8 @@ class SampleField extends RadioField
 		{
 			foreach ($files as $file)
 			{
-				$options[] = HTMLHelper::_('select.option', $file, Factory::getLanguage()->hasKey($key = 'INSTL_' . ($file = File::stripExt($file)) . '_SET') ?
-					HTMLHelper::_('tooltip', Text::_('INSTL_' . strtoupper($file = File::stripExt($file)) . '_SET_DESC'), '', '',
+				$options[] = HTMLHelper::_('select.option', $file, Factory::getLanguage()->hasKey($key = 'TXT_' . ($file = File::stripExt($file)) . '_SET') ?
+					HTMLHelper::_('tooltip', Text::_('TXT_' . strtoupper($file = File::stripExt($file)) . '_SET_DESC'), '', '',
 						Text::_('JYES')
 					) : $file
 				);

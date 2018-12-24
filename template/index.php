@@ -42,8 +42,8 @@ Text::script('JLIB_JS_AJAX_ERROR_PARSE');
 Text::script('JLIB_JS_AJAX_ERROR_TIMEOUT');
 
 // Load the JavaScript translated messages
-Text::script('INSTL_PROCESS_BUSY');
-Text::script('INSTL_FTP_SETTINGS_CORRECT');
+Text::script('TXT_PROCESS_BUSY');
+Text::script('TXT_FTP_SETTINGS_CORRECT');
 ?>
 <!DOCTYPE html>
 <html lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
@@ -61,17 +61,17 @@ Text::script('INSTL_FTP_SETTINGS_CORRECT');
 				<div class="j-header-help">
 					<a href="https://docs.joomla.org/Special:MyLanguage/J4.x:Installing_Joomla">
 						<span class="fa fa-lightbulb-o" aria-hidden="true"></span>
-						<span class="sr-only"><?php echo Text::_('INSTL_HELP_LINK'); ?></span>
+						<span class="sr-only"><?php echo Text::_('TXT_HELP_LINK'); ?></span>
 					</a>
 				</div>
 			</header>
 			<?php //var_dump(JUri::base(),JRoute::_('index.php')); // Container ?>
 			<main class="j-container">
-				<h1><?php echo Text::_('INSTL_PAGE_TITLE'); ?></h1>
+				<h1><?php echo Text::_('TXT_PAGE_TITLE'); ?></h1>
 				<jdoc:include type="message" />
 				<div id="javascript-warning">
 					<noscript>
-						<?php echo Text::_('INSTL_WARNJAVASCRIPT'); ?>
+						<?php echo Text::_('TXT_WARNJAVASCRIPT'); ?>
 					</noscript>
 				</div>
 				<div id="container-alpha" class="container-alpha flex no-js" data-base-url="<?php echo JUri::root(); ?>" style="">

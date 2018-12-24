@@ -4,7 +4,7 @@
 		<field
 			name="test"
 			type="editor"
-			label="INSTL_TEST_LABEL"
+			label="TXT_TEST_LABEL"
 			id="test"
 			default="en-GB"
 			required="true"
@@ -12,7 +12,7 @@
 		<field
 			name="language"
 			type="alpha.language"
-			label="INSTL_SELECT_LANGUAGE_TITLE"
+			label="TXT_SELECT_LANGUAGE_TITLE"
 			id="language"
 			class="custom-select required ml-2"
 			default="en-GB"
@@ -20,7 +20,7 @@
 		<field
 			name="site_name"
 			type="text"
-			label="INSTL_SITE_NAME_DESC"
+			label="TXT_SITE_NAME_DESC"
 			id="site_name"
 			class="form-control"
 			required="true"
@@ -28,7 +28,7 @@
 		<field
 			name="admin_email"
 			type="email"
-			label="INSTL_ADMIN_EMAIL_DESC"
+			label="TXT_ADMIN_EMAIL_DESC"
 			id="admin_email"
 			class="form-control"
 			validate="email"
@@ -37,7 +37,7 @@
 		<field
 			name="admin_user"
 			type="text"
-			label="INSTL_ADMIN_USER_DESC"
+			label="TXT_ADMIN_USER_DESC"
 			id="admin_user"
 			class="form-control"
 			required="true"
@@ -45,7 +45,7 @@
 		<field
 			name="admin_password"
 			type="password"
-			label="INSTL_ADMIN_PASSWORD_DESC"
+			label="TXT_ADMIN_PASSWORD_DESC"
 			id="admin_password"
 			class="form-control"
 			required="true"
@@ -54,7 +54,7 @@
 		<field
 			name="db_type"
 			type="databaseconnection"
-			label="INSTL_DATABASE_TYPE_DESC"
+			label="TXT_DATABASE_TYPE_DESC"
 			id="db_type"
 			class="custom-select form-control"
 			supported="mysql,mysqli,pgsql,postgresql"
@@ -65,7 +65,7 @@
 		<field
 			name="db_host"
 			type="text"
-			label="INSTL_DATABASE_HOST_DESC"
+			label="TXT_DATABASE_HOST_DESC"
 			id="db_host"
 			class="form-control"
 			default="localhost"
@@ -74,7 +74,7 @@
 		<field
 			name="db_user"
 			type="text"
-			label="INSTL_DATABASE_USER_DESC"
+			label="TXT_DATABASE_USER_DESC"
 			id="db_user"
 			class="form-control"
 			required="true"
@@ -82,7 +82,7 @@
 		<field
 			name="db_pass"
 			type="password"
-			label="INSTL_DATABASE_PASSWORD_DESC"
+			label="TXT_DATABASE_PASSWORD_DESC"
 			id="db_pass"
 			class="form-control"
 			autocomplete="off"
@@ -91,7 +91,7 @@
 		<field
 			name="db_name"
 			type="text"
-			label="INSTL_DATABASE_NAME_DESC"
+			label="TXT_DATABASE_NAME_DESC"
 			id="db_name"
 			class="form-control"
 			required="true"
@@ -104,12 +104,12 @@
 		<field
 			name="db_prefix"
 			type="alpha.prefix"
-			label="INSTL_DATABASE_PREFIX_DESC"
+			label="TXT_DATABASE_PREFIX_DESC"
 			id="db_prefix"
 			class="form-control"
 			required="true"
 			validate="prefix"
-			message="INSTL_DATABASE_PREFIX_MSG"
+			message="TXT_DATABASE_PREFIX_MSG"
 			autocomplete="off"
 		/>
 		<field

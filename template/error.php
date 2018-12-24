@@ -46,7 +46,7 @@ $this->setMetaData('viewport', 'width=device-width, initial-scale=1');
 				<div class="j-header-help">
 					<a href="https://docs.joomla.org/Special:MyLanguage/J4.x:Installing_Joomla">
 						<span class="fa fa-lightbulb-o" aria-hidden="true"></span>
-						<span class="sr-only"><?php echo Text::_('INSTL_HELP_LINK'); ?></span>
+						<span class="sr-only"><?php echo Text::_('TXT_HELP_LINK'); ?></span>
 					</a>
 				</div>
 			</header>
@@ -55,13 +55,13 @@ $this->setMetaData('viewport', 'width=device-width, initial-scale=1');
 				<jdoc:include type="message" />
 				<div id="javascript-warning">
 					<noscript>
-						<?php echo Text::_('INSTL_WARNJAVASCRIPT'); ?>
+						<?php echo Text::_('TXT_WARNJAVASCRIPT'); ?>
 					</noscript>
 				</div>
 				<div class="container-alpha flex">
 					<div class="j-install-step active">
 						<div class="j-install-step-header">
-							<span class="fa fa-exclamation" aria-hidden="true"></span> <?php echo Text::_('INSTL_ERROR'); ?>
+							<span class="fa fa-exclamation" aria-hidden="true"></span> <?php echo Text::_('TXT_ERROR'); ?>
 						</div>
 						<div class="j-install-step-form">
 							<div class="alert preinstall-alert">

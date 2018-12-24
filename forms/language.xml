@@ -4,7 +4,7 @@
 		<field
 			name="language"
 			type="alpha.language"
-			label="INSTL_SELECT_LANGUAGE_TITLE"
+			label="TXT_SELECT_LANGUAGE_TITLE"
 			id="language"
 			class="custom-select required ml-2"
 			default="en-GB"

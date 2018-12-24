@@ -41,6 +41,7 @@ class DefaultView extends BaseHtmlView
 	public function display($tpl = null)
 	{
 		$this->form = $this->get('Form');
+		//debug_print_backtrace();
 
 		return parent::display($tpl);
 	}

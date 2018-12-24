@@ -110,7 +110,7 @@ class ConfigurationModel extends BaseAlphaModel
 
 		// Site settings.
 		$registry->set('offline', false);
-		$registry->set('offline_message', Text::_('INSTL_STD_OFFLINE_MSG'));
+		$registry->set('offline_message', Text::_('TXT_STD_OFFLINE_MSG'));
 		$registry->set('display_offline_message', 1);
 		$registry->set('offline_image', '');
 		$registry->set('sitename', $options->site_name);
@@ -270,7 +270,7 @@ class ConfigurationModel extends BaseAlphaModel
 		}
 		catch (\RuntimeException $e)
 		{
-			Factory::getApplication()->enqueueMessage(Text::sprintf('INSTL_ERROR_CONNECT_DB', $e->getMessage()), 'error');
+			Factory::getApplication()->enqueueMessage(Text::sprintf('TXT_ERROR_CONNECT_DB', $e->getMessage()), 'error');
 
 			return false;
 		}

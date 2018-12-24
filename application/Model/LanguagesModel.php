@@ -165,8 +165,8 @@ class LanguagesModel extends BaseAlphaModel
 			if (!$remote_manifest)
 			{
 				// Could not find the url, the information in the update server may be corrupt.
-				$message = Text::sprintf('INSTL_DEFAULTLANGUAGE_COULD_NOT_INSTALL_LANGUAGE', $language->name);
-				$message .= ' ' . Text::_('INSTL_DEFAULTLANGUAGE_TRY_LATER');
+				$message = Text::sprintf('TXT_DEFAULTLANGUAGE_COULD_NOT_INSTALL_LANGUAGE', $language->name);
+				$message .= ' ' . Text::_('TXT_DEFAULTLANGUAGE_TRY_LATER');
 
 				Factory::getApplication()->enqueueMessage($message, 'warning');
 
@@ -179,8 +179,8 @@ class LanguagesModel extends BaseAlphaModel
 			if (!$package_url)
 			{
 				// Could not find the URL, maybe the URL is wrong in the update server, or there is no internet access.
-				$message = Text::sprintf('INSTL_DEFAULTLANGUAGE_COULD_NOT_INSTALL_LANGUAGE', $language->name);
-				$message .= ' ' . Text::_('INSTL_DEFAULTLANGUAGE_TRY_LATER');
+				$message = Text::sprintf('TXT_DEFAULTLANGUAGE_COULD_NOT_INSTALL_LANGUAGE', $language->name);
+				$message .= ' ' . Text::_('TXT_DEFAULTLANGUAGE_TRY_LATER');
 
 				Factory::getApplication()->enqueueMessage($message, 'warning');
 
@@ -194,8 +194,8 @@ class LanguagesModel extends BaseAlphaModel
 			if (!$installer->install($package['dir']))
 			{
 				// There was an error installing the package.
-				$message = Text::sprintf('INSTL_DEFAULTLANGUAGE_COULD_NOT_INSTALL_LANGUAGE', $language->name);
-				$message .= ' ' . Text::_('INSTL_DEFAULTLANGUAGE_TRY_LATER');
+				$message = Text::sprintf('TXT_DEFAULTLANGUAGE_COULD_NOT_INSTALL_LANGUAGE', $language->name);
+				$message .= ' ' . Text::_('TXT_DEFAULTLANGUAGE_TRY_LATER');
 
 				Factory::getApplication()->enqueueMessage($message, 'warning');
 
@@ -532,6 +532,7 @@ class LanguagesModel extends BaseAlphaModel
 		Form::addFieldPath(JPATH_COMPONENT . '/model/fields');
 		Form::addRulePath(JPATH_COMPONENT . '/model/rules');
 
+		die( var_dump(JPATH_COMPONENT . '/model'));
 		try
 		{
 			$form = Form::getInstance('jform', $view, array('control' => 'jform'));
@@ -796,10 +797,10 @@ class LanguagesModel extends BaseAlphaModel
 
 		// Load the native language name.
 		$alphaLocalisedIni = new Language($itemLanguage->language, false);
-		$nativeLanguageName       = $alphaLocalisedIni->_('INSTL_DEFAULTLANGUAGE_NATIVE_LANGUAGE_NAME');
+		$nativeLanguageName       = $alphaLocalisedIni->_('TXT_DEFAULTLANGUAGE_NATIVE_LANGUAGE_NAME');
 
 		// If the local name do not exist in the translation file we use the international standard name.
-		if ($nativeLanguageName == 'INSTL_DEFAULTLANGUAGE_NATIVE_LANGUAGE_NAME')
+		if ($nativeLanguageName == 'TXT_DEFAULTLANGUAGE_NATIVE_LANGUAGE_NAME')
 		{
 			$nativeLanguageName = $itemLanguage->name;
 		}

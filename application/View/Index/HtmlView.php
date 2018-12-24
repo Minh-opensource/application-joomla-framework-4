@@ -7,7 +7,7 @@
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-namespace Joomla\CMS\Alpha\View\Setup;
+namespace Joomla\CMS\Alpha\View\Index;
 
 defined('_JEXEC') or die;
 

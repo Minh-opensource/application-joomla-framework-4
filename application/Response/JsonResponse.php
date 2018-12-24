@@ -63,7 +63,7 @@ class JsonResponse
 		{
 			// Prepare the error response.
 			$this->error   = true;
-			$this->header  = Text::_('INSTL_HEADER_ERROR');
+			$this->header  = Text::_('TXT_HEADER_ERROR');
 			$this->message = $data->getMessage();
 		}
 		else

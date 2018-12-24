@@ -19,7 +19,7 @@ use Joomla\CMS\MVC\View\AbstractView;
  *
  * @since  3.1
  */
-class DisplayController extends BaseController
+class DefaultController extends BaseController
 {
 	/**
 	 * Method to display a view.
@@ -35,47 +35,12 @@ class DisplayController extends BaseController
 	{
 		$app = $this->app;
 
-		$defaultView = 'setup';
-
-		// If the app has already been installed, default to the remove view
-		if (file_exists(JPATH_CONFIGURATION . '/configuration.php')
-			&& filesize(JPATH_CONFIGURATION . '/configuration.php') > 10
-			&& file_exists(JPATH_ALPHA . '/index.php'))
-		{
-			$defaultView = 'remove';
-		}
+		$defaultView = 'index';
 
 		// Are we allowed to proceed?
-		$model = $this->getModel('Checks');
+		//$model = $this->getModel('Checks');
 
 		$vName = $this->input->getWord('view', $defaultView);
-
-		if (!$model->getPhpOptionsSufficient() && $defaultView !== 'remove')
-		{
-			if ($vName !== 'preinstall')
-			{
-				$app->redirect('index.php?view=preinstall');
-			}
-
-			$vName = 'preinstall';
-		}
-		else
-		{
-			if ($vName === 'preinstall')
-			{
-				$app->redirect('index.php?view=setup');
-			}
-
-			if ($vName === 'remove' && !file_exists(JPATH_CONFIGURATION . '/configuration.php'))
-			{
-				$app->redirect('index.php?view=setup');
-			}
-
-			if ($vName !== $defaultView && !$model->getOptions() && $defaultView !== 'remove')
-			{
-				$app->redirect('index.php');
-			}
-		}
 
 		$this->input->set('view', $vName);
 

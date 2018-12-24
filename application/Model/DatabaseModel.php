@@ -134,7 +134,7 @@ class DatabaseModel extends BaseAlphaModel
 		// Ensure a database type was selected.
 		if (empty($options->db_type))
 		{
-			Factory::getApplication()->enqueueMessage(Text::_('INSTL_DATABASE_INVALID_TYPE'), 'warning');
+			Factory::getApplication()->enqueueMessage(Text::_('TXT_DATABASE_INVALID_TYPE'), 'warning');
 
 			return false;
 		}
@@ -142,7 +142,7 @@ class DatabaseModel extends BaseAlphaModel
 		// Ensure that a hostname and user name were input.
 		if (empty($options->db_host) || empty($options->db_user))
 		{
-			Factory::getApplication()->enqueueMessage(Text::_('INSTL_DATABASE_INVALID_DB_DETAILS'), 'warning');
+			Factory::getApplication()->enqueueMessage(Text::_('TXT_DATABASE_INVALID_DB_DETAILS'), 'warning');
 
 			return false;
 		}
@@ -150,7 +150,7 @@ class DatabaseModel extends BaseAlphaModel
 		// Ensure that a database name was input.
 		if (empty($options->db_name))
 		{
-			Factory::getApplication()->enqueueMessage(Text::_('INSTL_DATABASE_EMPTY_NAME'), 'warning');
+			Factory::getApplication()->enqueueMessage(Text::_('TXT_DATABASE_EMPTY_NAME'), 'warning');
 
 			return false;
 		}
@@ -158,7 +158,7 @@ class DatabaseModel extends BaseAlphaModel
 		// Validate database table prefix.
 		if (isset($options->db_prefix) && !preg_match('#^[a-zA-Z]+[a-zA-Z0-9_]*$#', $options->db_prefix))
 		{
-			Factory::getApplication()->enqueueMessage(Text::_('INSTL_DATABASE_PREFIX_MSG'), 'warning');
+			Factory::getApplication()->enqueueMessage(Text::_('TXT_DATABASE_PREFIX_MSG'), 'warning');
 
 			return false;
 		}
@@ -166,7 +166,7 @@ class DatabaseModel extends BaseAlphaModel
 		// Validate length of database table prefix.
 		if (isset($options->db_prefix) && strlen($options->db_prefix) > 15)
 		{
-			Factory::getApplication()->enqueueMessage(Text::_('INSTL_DATABASE_FIX_TOO_LONG'), 'warning');
+			Factory::getApplication()->enqueueMessage(Text::_('TXT_DATABASE_FIX_TOO_LONG'), 'warning');
 
 			return false;
 		}
@@ -174,7 +174,7 @@ class DatabaseModel extends BaseAlphaModel
 		// Validate length of database name.
 		if (strlen($options->db_name) > 64)
 		{
-			Factory::getApplication()->enqueueMessage(Text::_('INSTL_DATABASE_NAME_TOO_LONG'), 'warning');
+			Factory::getApplication()->enqueueMessage(Text::_('TXT_DATABASE_NAME_TOO_LONG'), 'warning');
 
 			return false;
 		}
@@ -182,7 +182,7 @@ class DatabaseModel extends BaseAlphaModel
 		// Validate database name.
 		if (!preg_match('#^[a-zA-Z][0-9a-zA-Z_$]*$#', $options->db_name))
 		{
-			Factory::getApplication()->enqueueMessage(Text::_('INSTL_DATABASE_NAME_MSG'), 'warning');
+			Factory::getApplication()->enqueueMessage(Text::_('TXT_DATABASE_NAME_MSG'), 'warning');
 
 			return false;
 		}
@@ -192,7 +192,7 @@ class DatabaseModel extends BaseAlphaModel
 		{
 			if (isset($options->db_prefix) && strtolower($options->db_prefix) !== $options->db_prefix)
 			{
-				Factory::getApplication()->enqueueMessage(Text::_('INSTL_DATABASE_FIX_LOWERCASE'), 'warning');
+				Factory::getApplication()->enqueueMessage(Text::_('TXT_DATABASE_FIX_LOWERCASE'), 'warning');
 
 				return false;
 			}
@@ -217,7 +217,7 @@ class DatabaseModel extends BaseAlphaModel
 			if ($remoteDbFileTestsPassed === false)
 			{
 				$generalRemoteDatabaseMessage = Text::sprintf(
-					'INSTL_DATABASE_HOST_IS_NOT_LOCALHOST_GENERAL_MESSAGE',
+					'TXT_DATABASE_HOST_IS_NOT_LOCALHOST_GENERAL_MESSAGE',
 					'https://docs.joomla.org/Special:MyLanguage/J3.x:Secured_procedure_for_installing_Joomla_with_a_remote_database'
 				);
 
@@ -239,7 +239,7 @@ class DatabaseModel extends BaseAlphaModel
 					if (!File::write($remoteDbPath, ''))
 					{
 						// Request to create the file manually
-						Factory::getApplication()->enqueueMessage(Text::sprintf('INSTL_DATABASE_HOST_IS_NOT_LOCALHOST_CREATE_FILE', $remoteDbFile), 'error');
+						Factory::getApplication()->enqueueMessage(Text::sprintf('TXT_DATABASE_HOST_IS_NOT_LOCALHOST_CREATE_FILE', $remoteDbFile), 'error');
 
 						Factory::getSession()->set('remoteDbFileUnwritable', true);
 
@@ -250,7 +250,7 @@ class DatabaseModel extends BaseAlphaModel
 					Factory::getSession()->set('remoteDbFileWrittenByJoomla', true);
 
 					// Request to delete that file
-					Factory::getApplication()->enqueueMessage(Text::sprintf('INSTL_DATABASE_HOST_IS_NOT_LOCALHOST_DELETE_FILE', $remoteDbFile), 'error');
+					Factory::getApplication()->enqueueMessage(Text::sprintf('TXT_DATABASE_HOST_IS_NOT_LOCALHOST_DELETE_FILE', $remoteDbFile), 'error');
 
 					return false;
 				}
@@ -260,7 +260,7 @@ class DatabaseModel extends BaseAlphaModel
 					// Add the general message
 					Factory::getApplication()->enqueueMessage($generalRemoteDatabaseMessage, 'warning');
 
-					Factory::getApplication()->enqueueMessage(Text::sprintf('INSTL_DATABASE_HOST_IS_NOT_LOCALHOST_DELETE_FILE', $remoteDbFile), 'error');
+					Factory::getApplication()->enqueueMessage(Text::sprintf('TXT_DATABASE_HOST_IS_NOT_LOCALHOST_DELETE_FILE', $remoteDbFile), 'error');
 
 					return false;
 				}
@@ -270,7 +270,7 @@ class DatabaseModel extends BaseAlphaModel
 					// Add the general message
 					Factory::getApplication()->enqueueMessage($generalRemoteDatabaseMessage, 'warning');
 
-					Factory::getApplication()->enqueueMessage(Text::sprintf('INSTL_DATABASE_HOST_IS_NOT_LOCALHOST_CREATE_FILE', $remoteDbFile), 'error');
+					Factory::getApplication()->enqueueMessage(Text::sprintf('TXT_DATABASE_HOST_IS_NOT_LOCALHOST_CREATE_FILE', $remoteDbFile), 'error');
 
 					return false;
 				}
@@ -297,7 +297,7 @@ class DatabaseModel extends BaseAlphaModel
 		}
 		catch (\RuntimeException $e)
 		{
-			Factory::getApplication()->enqueueMessage(Text::sprintf('INSTL_DATABASE_COULD_NOT_CONNECT', $e->getMessage()), 'error');
+			Factory::getApplication()->enqueueMessage(Text::sprintf('TXT_DATABASE_COULD_NOT_CONNECT', $e->getMessage()), 'error');
 
 			return false;
 		}
@@ -377,7 +377,7 @@ class DatabaseModel extends BaseAlphaModel
 				catch (\RuntimeException $e)
 				{
 					// We did everything we could
-					throw new \RuntimeException(Text::_('INSTL_DATABASE_COULD_NOT_CREATE_DATABASE'), 500, $e);
+					throw new \RuntimeException(Text::_('TXT_DATABASE_COULD_NOT_CREATE_DATABASE'), 500, $e);
 				}
 
 				// If we got here, the database should have been successfully created, now try one more time to get the version
@@ -388,35 +388,35 @@ class DatabaseModel extends BaseAlphaModel
 				catch (\RuntimeException $e)
 				{
 					// We did everything we could
-					throw new \RuntimeException(Text::sprintf('INSTL_DATABASE_COULD_NOT_CONNECT', $e->getMessage()), 500, $e);
+					throw new \RuntimeException(Text::sprintf('TXT_DATABASE_COULD_NOT_CONNECT', $e->getMessage()), 500, $e);
 				}
 			}
 			elseif ($type === 'postgresql' && strpos($e->getMessage(), 'Error connecting to PGSQL database') === 42)
 			{
-				throw new \RuntimeException(Text::_('INSTL_DATABASE_COULD_NOT_CREATE_DATABASE'), 500, $e);
+				throw new \RuntimeException(Text::_('TXT_DATABASE_COULD_NOT_CREATE_DATABASE'), 500, $e);
 			}
 			// Anything getting into this part of the conditional either doesn't support manually creating the database or isn't that type of error
 			else
 			{
-				throw new \RuntimeException(Text::sprintf('INSTL_DATABASE_COULD_NOT_CONNECT', $e->getMessage()), 500, $e);
+				throw new \RuntimeException(Text::sprintf('TXT_DATABASE_COULD_NOT_CONNECT', $e->getMessage()), 500, $e);
 			}
 		}
 
 		if (!$db->isMinimumVersion())
 		{
-			throw new \RuntimeException(Text::sprintf('INSTL_DATABASE_INVALID_' . strtoupper($type) . '_VERSION', $db_version));
+			throw new \RuntimeException(Text::sprintf('TXT_DATABASE_INVALID_' . strtoupper($type) . '_VERSION', $db_version));
 		}
 
 		// @internal Check for spaces in beginning or end of name.
 		if (strlen(trim($options->db_name)) <> strlen($options->db_name))
 		{
-			throw new \RuntimeException(Text::_('INSTL_DATABASE_NAME_INVALID_SPACES'));
+			throw new \RuntimeException(Text::_('TXT_DATABASE_NAME_INVALID_SPACES'));
 		}
 
 		// @internal Check for asc(00) Null in name.
 		if (strpos($options->db_name, chr(00)) !== false)
 		{
-			throw new \RuntimeException(Text::_('INSTL_DATABASE_NAME_INVALID_CHAR'));
+			throw new \RuntimeException(Text::_('TXT_DATABASE_NAME_INVALID_CHAR'));
 		}
 
 		// Get database's UTF support.
@@ -432,7 +432,7 @@ class DatabaseModel extends BaseAlphaModel
 			// If the database could not be selected, attempt to create it and then select it.
 			if (!$this->createDb($db, $options, $utfSupport))
 			{
-				throw new \RuntimeException(Text::sprintf('INSTL_DATABASE_ERROR_CREATE', $options->db_name), 500, $e);
+				throw new \RuntimeException(Text::sprintf('TXT_DATABASE_ERROR_CREATE', $options->db_name), 500, $e);
 			}
 
 			$db->select($options->db_name);
@@ -556,7 +556,7 @@ class DatabaseModel extends BaseAlphaModel
 		// Check if the schema is a valid file
 		if (!is_file($schema))
 		{
-			Factory::getApplication()->enqueueMessage(Text::sprintf('INSTL_ERROR_DB', Text::_('INSTL_DATABASE_NO_SCHEMA')), 'error');
+			Factory::getApplication()->enqueueMessage(Text::sprintf('TXT_ERROR_DB', Text::_('TXT_DATABASE_NO_SCHEMA')), 'error');
 
 			return false;
 		}
@@ -597,7 +597,7 @@ class DatabaseModel extends BaseAlphaModel
 
 		if (empty($files))
 		{
-			Factory::getApplication()->enqueueMessage(Text::_('INSTL_ERROR_INITIALISE_SCHEMA'), 'error');
+			Factory::getApplication()->enqueueMessage(Text::_('TXT_ERROR_INITIALISE_SCHEMA'), 'error');
 
 			return false;
 		}
@@ -659,7 +659,7 @@ class DatabaseModel extends BaseAlphaModel
 		{
 			if (!$installer->refreshManifestCache($extension->extension_id))
 			{
-				Factory::getApplication()->enqueueMessage(Text::sprintf('INSTL_DATABASE_COULD_NOT_REFRESH_MANIFEST_CACHE', $extension->name), 'error');
+				Factory::getApplication()->enqueueMessage(Text::sprintf('TXT_DATABASE_COULD_NOT_REFRESH_MANIFEST_CACHE', $extension->name), 'error');
 
 				return false;
 			}
@@ -752,7 +752,7 @@ class DatabaseModel extends BaseAlphaModel
 		{
 			if (!file_exists($data))
 			{
-				Factory::getApplication()->enqueueMessage(Text::sprintf('INSTL_DATABASE_FILE_DOES_NOT_EXIST', $data), 'error');
+				Factory::getApplication()->enqueueMessage(Text::sprintf('TXT_DATABASE_FILE_DOES_NOT_EXIST', $data), 'error');
 
 				return false;
 			}
@@ -975,7 +975,7 @@ class DatabaseModel extends BaseAlphaModel
 					}
 					catch (\RuntimeException $e)
 					{
-						Factory::getApplication()->enqueueMessage(Text::sprintf('INSTL_DATABASE_ERROR_BACKINGUP', $e->getMessage()), 'error');
+						Factory::getApplication()->enqueueMessage(Text::sprintf('TXT_DATABASE_ERROR_BACKINGUP', $e->getMessage()), 'error');
 
 						$return = false;
 					}
@@ -987,7 +987,7 @@ class DatabaseModel extends BaseAlphaModel
 					}
 					catch (\RuntimeException $e)
 					{
-						Factory::getApplication()->enqueueMessage(Text::sprintf('INSTL_DATABASE_ERROR_BACKINGUP', $e->getMessage()), 'error');
+						Factory::getApplication()->enqueueMessage(Text::sprintf('TXT_DATABASE_ERROR_BACKINGUP', $e->getMessage()), 'error');
 
 						$return = false;
 					}
@@ -1058,7 +1058,7 @@ class DatabaseModel extends BaseAlphaModel
 					}
 					catch (\RuntimeException $e)
 					{
-						Factory::getApplication()->enqueueMessage(Text::sprintf('INSTL_DATABASE_ERROR_DELETE', $e->getMessage()), 'error');
+						Factory::getApplication()->enqueueMessage(Text::sprintf('TXT_DATABASE_ERROR_DELETE', $e->getMessage()), 'error');
 
 						$return = false;
 					}
@@ -1086,7 +1086,7 @@ class DatabaseModel extends BaseAlphaModel
 		// Get the contents of the schema file.
 		if (!($buffer = file_get_contents($schema)))
 		{
-			Factory::getApplication()->enqueueMessage(Text::_('INSTL_SAMPLE_DATA_NOT_FOUND'), 'error');
+			Factory::getApplication()->enqueueMessage(Text::_('TXT_SAMPLE_DATA_NOT_FOUND'), 'error');
 
 			return false;
 		}

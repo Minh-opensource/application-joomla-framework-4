@@ -68,26 +68,26 @@ class ChecksModel extends BaseAlphaModel
 
 		// Check for zlib support.
 		$option = new \stdClass;
-		$option->label  = Text::_('INSTL_ZLIB_COMPRESSION_SUPPORT');
+		$option->label  = Text::_('TXT_ZLIB_COMPRESSION_SUPPORT');
 		$option->state  = extension_loaded('zlib');
-		$option->notice = $option->state ? null : Text::_('INSTL_NOTICE_ZLIB_COMPRESSION_SUPPORT');
+		$option->notice = $option->state ? null : Text::_('TXT_NOTICE_ZLIB_COMPRESSION_SUPPORT');
 		$options[] = $option;
 
 		// Check for XML support.
 		$option = new \stdClass;
-		$option->label  = Text::_('INSTL_XML_SUPPORT');
+		$option->label  = Text::_('TXT_XML_SUPPORT');
 		$option->state  = extension_loaded('xml');
-		$option->notice = $option->state ? null : Text::_('INSTL_NOTICE_XML_SUPPORT');
+		$option->notice = $option->state ? null : Text::_('TXT_NOTICE_XML_SUPPORT');
 		$options[] = $option;
 
 		// Check for database support.
 		// We are satisfied if there is at least one database driver available.
 		$available = \JDatabaseDriver::getConnectors();
 		$option = new \stdClass;
-		$option->label  = Text::_('INSTL_DATABASE_SUPPORT');
+		$option->label  = Text::_('TXT_DATABASE_SUPPORT');
 		$option->label .= '<br>(' . implode(', ', $available) . ')';
 		$option->state  = count($available);
-		$option->notice = $option->state ? null : Text::_('INSTL_NOTICE_DATABASE_SUPPORT');
+		$option->notice = $option->state ? null : Text::_('TXT_NOTICE_DATABASE_SUPPORT');
 		$options[] = $option;
 
 		// Check for mbstring options.
@@ -95,31 +95,31 @@ class ChecksModel extends BaseAlphaModel
 		{
 			// Check for default MB language.
 			$option = new \stdClass;
-			$option->label  = Text::_('INSTL_MB_LANGUAGE_IS_DEFAULT');
+			$option->label  = Text::_('TXT_MB_LANGUAGE_IS_DEFAULT');
 			$option->state  = (strtolower(ini_get('mbstring.language')) == 'neutral');
-			$option->notice = $option->state ? null : Text::_('INSTL_NOTICE_MBLANG_NOTDEFAULT');
+			$option->notice = $option->state ? null : Text::_('TXT_NOTICE_MBLANG_NOTDEFAULT');
 			$options[] = $option;
 
 			// Check for MB function overload.
 			$option = new \stdClass;
-			$option->label  = Text::_('INSTL_MB_STRING_OVERLOAD_OFF');
+			$option->label  = Text::_('TXT_MB_STRING_OVERLOAD_OFF');
 			$option->state  = (ini_get('mbstring.func_overload') == 0);
-			$option->notice = $option->state ? null : Text::_('INSTL_NOTICE_MBSTRING_OVERLOAD_OFF');
+			$option->notice = $option->state ? null : Text::_('TXT_NOTICE_MBSTRING_OVERLOAD_OFF');
 			$options[] = $option;
 		}
 
 		// Check for a missing native parse_ini_file implementation.
 		$option = new \stdClass;
-		$option->label  = Text::_('INSTL_PARSE_INI_FILE_AVAILABLE');
+		$option->label  = Text::_('TXT_PARSE_INI_FILE_AVAILABLE');
 		$option->state  = $this->getIniParserAvailability();
-		$option->notice = $option->state ? null : Text::_('INSTL_NOTICE_PARSE_INI_FILE_AVAILABLE');
+		$option->notice = $option->state ? null : Text::_('TXT_NOTICE_PARSE_INI_FILE_AVAILABLE');
 		$options[] = $option;
 
 		// Check for missing native json_encode / json_decode support.
 		$option = new \stdClass;
-		$option->label  = Text::_('INSTL_JSON_SUPPORT_AVAILABLE');
+		$option->label  = Text::_('TXT_JSON_SUPPORT_AVAILABLE');
 		$option->state  = function_exists('json_encode') && function_exists('json_decode');
-		$option->notice = $option->state ? null : Text::_('INSTL_NOTICE_JSON_SUPPORT_AVAILABLE');
+		$option->notice = $option->state ? null : Text::_('TXT_NOTICE_JSON_SUPPORT_AVAILABLE');
 		$options[] = $option;
 
 		// Check for configuration file writable.
@@ -127,9 +127,9 @@ class ChecksModel extends BaseAlphaModel
 			|| (!file_exists(JPATH_CONFIGURATION . '/configuration.php') && is_writable(JPATH_ROOT)));
 
 		$option = new \stdClass;
-		$option->label  = Text::sprintf('INSTL_WRITABLE', 'configuration.php');
+		$option->label  = Text::sprintf('TXT_WRITABLE', 'configuration.php');
 		$option->state  = $writable;
-		$option->notice = $option->state ? null : Text::_('INSTL_NOTICEYOUCANSTILLINSTALL');
+		$option->notice = $option->state ? null : Text::_('TXT_NOTICEYOUCANSTILLINSTALL');
 		$options[] = $option;
 
 		return $options;
@@ -170,35 +170,35 @@ class ChecksModel extends BaseAlphaModel
 
 		// Check for display errors.
 		$setting = new \stdClass;
-		$setting->label = Text::_('INSTL_DISPLAY_ERRORS');
+		$setting->label = Text::_('TXT_DISPLAY_ERRORS');
 		$setting->state = (bool) ini_get('display_errors');
 		$setting->recommended = false;
 		$settings[] = $setting;
 
 		// Check for file uploads.
 		$setting = new \stdClass;
-		$setting->label = Text::_('INSTL_FILE_UPLOADS');
+		$setting->label = Text::_('TXT_FILE_UPLOADS');
 		$setting->state = (bool) ini_get('file_uploads');
 		$setting->recommended = true;
 		$settings[] = $setting;
 
 		// Check for output buffering.
 		$setting = new \stdClass;
-		$setting->label = Text::_('INSTL_OUTPUT_BUFFERING');
+		$setting->label = Text::_('TXT_OUTPUT_BUFFERING');
 		$setting->state = (int) ini_get('output_buffering') !== 0;
 		$setting->recommended = false;
 		$settings[] = $setting;
 
 		// Check for session auto-start.
 		$setting = new \stdClass;
-		$setting->label = Text::_('INSTL_SESSION_AUTO_START');
+		$setting->label = Text::_('TXT_SESSION_AUTO_START');
 		$setting->state = (bool) ini_get('session.auto_start');
 		$setting->recommended = false;
 		$settings[] = $setting;
 
 		// Check for native ZIP support.
 		$setting = new \stdClass;
-		$setting->label = Text::_('INSTL_ZIP_SUPPORT_AVAILABLE');
+		$setting->label = Text::_('TXT_ZIP_SUPPORT_AVAILABLE');
 		$setting->state = function_exists('zip_open') && function_exists('zip_read');
 		$setting->recommended = true;
 		$settings[] = $setting;
@@ -239,6 +239,7 @@ class ChecksModel extends BaseAlphaModel
 
 		// Get the form.
 		Form::addFormPath(JPATH_COMPONENT . '/forms');
+		die( var_dump(JPATH_COMPONENT . '/forms'));
 
 		try
 		{
