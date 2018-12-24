@@ -13,7 +13,6 @@ use Joomla\CMS\HTML\HTMLHelper;
 use Joomla\CMS\Language\Text;
 
 /** @var \Joomla\CMS\Alpha\View\Setup\HtmlView $this */
-die( var_dump($this->form) );
 ?>
 
 

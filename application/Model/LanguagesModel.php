@@ -532,7 +532,6 @@ class LanguagesModel extends BaseAlphaModel
 		Form::addFieldPath(JPATH_COMPONENT . '/model/fields');
 		Form::addRulePath(JPATH_COMPONENT . '/model/rules');
 
-		die( var_dump(JPATH_COMPONENT . '/model'));
 		try
 		{
 			$form = Form::getInstance('jform', $view, array('control' => 'jform'));

@@ -7,27 +7,34 @@
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-namespace Joomla\CMS\Alpha\View;
+namespace Joomla\CMS\Alpha\View\Preinstall;
 
 defined('_JEXEC') or die;
 
-use Joomla\CMS\Form\Form;
-use Joomla\CMS\MVC\View\HtmlView as BaseHtmlView;
+use Joomla\CMS\Alpha\View\DefaultView;
 
 /**
- * Generic Alpha View
+ * The HTML Joomla Core Install Preinstall View
  *
  * @since  3.1
  */
-class DefaultView extends BaseHtmlView
+class HtmlView extends DefaultView
 {
 	/**
-	 * The Form object
+	 * Array of PHP config options.
 	 *
-	 * @var    Form
+	 * @var    array
 	 * @since  3.1
 	 */
-	protected $form;
+	protected $options;
+
+	/**
+	 * The default model
+	 *
+	 * @var	   string
+	 * @since  3.0
+	 */
+	protected $_defaultModel = 'checks';
 
 	/**
 	 * Execute and display a template script.
@@ -40,7 +47,7 @@ class DefaultView extends BaseHtmlView
 	 */
 	public function display($tpl = null)
 	{
-		$this->form = $this->get('Form');
+		$this->options = $this->get('PhpOptions');
 
 		return parent::display($tpl);
 	}

@@ -23,7 +23,7 @@ use Joomla\Utilities\ArrayHelper;
  *
  * @since  3.1
  */
-class SetupModel extends BaseAlphaModel
+class IndexModel extends BaseAlphaModel
 {
 	/**
 	 * Get the current setup options from the session.
@@ -84,7 +84,7 @@ class SetupModel extends BaseAlphaModel
 	{
 		if (!$view)
 		{
-			$view = Factory::getApplication()->input->getWord('view', 'setup');
+			$view = Factory::getApplication()->input->getWord('view', 'index');
 		}
 
 		// Get the form.
@@ -122,7 +122,7 @@ class SetupModel extends BaseAlphaModel
 	 *
 	 * @since   3.1
 	 */
-	public function checkForm($page = 'setup')
+	public function checkForm($page = 'index')
 	{
 		// Get the posted values from the request and validate them.
 		$data   = Factory::getApplication()->input->post->get('jform', array(), 'array');

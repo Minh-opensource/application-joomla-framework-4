@@ -239,7 +239,6 @@ class ChecksModel extends BaseAlphaModel
 
 		// Get the form.
 		Form::addFormPath(JPATH_COMPONENT . '/forms');
-		die( var_dump(JPATH_COMPONENT . '/forms'));
 
 		try
 		{

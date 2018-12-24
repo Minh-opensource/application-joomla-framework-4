@@ -104,4 +104,4 @@ libraries
 *.bk.php
 *.php-dist
 ./.gitignore
-_remove/
+_media/
