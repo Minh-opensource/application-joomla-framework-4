@@ -23,7 +23,7 @@ use Joomla\Database\UTF8MB4SupportInterface;
 use Joomla\Utilities\ArrayHelper;
 
 /**
- * Database configuration model for the Joomla Core Installer.
+ * Database configuration model for the Joomla Core Alpha Application.
  *
  * @since  3.1
  */

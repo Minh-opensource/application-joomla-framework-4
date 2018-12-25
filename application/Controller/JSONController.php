@@ -18,7 +18,7 @@ use Joomla\CMS\MVC\Controller\BaseController;
 use Joomla\CMS\Session\Session;
 
 /**
- * Default JSON controller class for the Joomla Installer controllers.
+ * Default JSON controller class for the Joomla Alpha Application controllers.
  *
  * @since  4.0.0
  */

@@ -17,7 +17,7 @@ use Joomla\CMS\MVC\Factory\MVCFactoryInterface;
 use Joomla\Utilities\ArrayHelper;
 
 /**
- * Default controller class for the Joomla Installer.
+ * Default controller class for the Joomla Alpha Application.
  *
  * @since  3.1
  */

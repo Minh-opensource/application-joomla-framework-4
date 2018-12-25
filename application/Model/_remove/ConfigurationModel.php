@@ -19,7 +19,7 @@ use Joomla\Registry\Registry;
 use Joomla\Utilities\ArrayHelper;
 
 /**
- * Configuration setup model for the Joomla Core Installer.
+ * Configuration setup model for the Joomla Core Alpha Application.
  *
  * @since  3.1
  */

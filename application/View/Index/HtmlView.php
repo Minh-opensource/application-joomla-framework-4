@@ -14,7 +14,7 @@ defined('_JEXEC') or die;
 use Joomla\CMS\Alpha\View\DefaultView;
 
 /**
- * The HTML Joomla Core Install Setup View
+ * The HTML Joomla Core Index View
  *
  * @since  3.1
  */

@@ -15,7 +15,7 @@ use Joomla\CMS\MVC\Controller\BaseController;
 use Joomla\CMS\MVC\View\AbstractView;
 
 /**
- * Display controller class for the Joomla Installer.
+ * Display controller class for the Joomla Alpha Application.
  *
  * @since  3.1
  */

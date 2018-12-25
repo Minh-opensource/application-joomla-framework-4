@@ -2,121 +2,18 @@
 <form addfieldprefix="Joomla\CMS\Alpha\Form\Field" addruleprefix="Joomla\CMS\Alpha\Form\Rule">
 	<fieldset name="site">
 		<field
-			name="test"
-			type="editor"
-			label="TXT_TEST_LABEL"
-			id="test"
-			default="en-GB"
-			required="true"
-		/>
-		<field
-			name="language"
-			type="alpha.language"
-			label="TXT_SELECT_LANGUAGE_TITLE"
-			id="language"
-			class="custom-select required ml-2"
-			default="en-GB"
-		/>
-		<field
-			name="site_name"
+			name="name"
 			type="text"
-			label="TXT_SITE_NAME_DESC"
-			id="site_name"
-			class="form-control"
+			label="TXT_NAME_LABEL"
+			id="name"
 			required="true"
 		/>
 		<field
-			name="admin_email"
-			type="email"
-			label="TXT_ADMIN_EMAIL_DESC"
-			id="admin_email"
-			class="form-control"
-			validate="email"
-			required="true"
-		/>
-		<field
-			name="admin_user"
+			name="msg"
 			type="text"
-			label="TXT_ADMIN_USER_DESC"
-			id="admin_user"
-			class="form-control"
+			label="TXT_SENT_MSG_LABEL"
+			id="msg"
 			required="true"
-		/>
-		<field
-			name="admin_password"
-			type="password"
-			label="TXT_ADMIN_PASSWORD_DESC"
-			id="admin_password"
-			class="form-control"
-			required="true"
-			autocomplete="off"
-		/>
-		<field
-			name="db_type"
-			type="databaseconnection"
-			label="TXT_DATABASE_TYPE_DESC"
-			id="db_type"
-			class="custom-select form-control"
-			supported="mysql,mysqli,pgsql,postgresql"
-			required="true"
-			default="mysqli"
-			filter="string"
-		/>
-		<field
-			name="db_host"
-			type="text"
-			label="TXT_DATABASE_HOST_DESC"
-			id="db_host"
-			class="form-control"
-			default="localhost"
-			required="true"
-		/>
-		<field
-			name="db_user"
-			type="text"
-			label="TXT_DATABASE_USER_DESC"
-			id="db_user"
-			class="form-control"
-			required="true"
-		/>
-		<field
-			name="db_pass"
-			type="password"
-			label="TXT_DATABASE_PASSWORD_DESC"
-			id="db_pass"
-			class="form-control"
-			autocomplete="off"
-			filter="raw"
-		/>
-		<field
-			name="db_name"
-			type="text"
-			label="TXT_DATABASE_NAME_DESC"
-			id="db_name"
-			class="form-control"
-			required="true"
-			default="joomla_db"
-		/>
-	</fieldset>
-
-	<!-- Advanced Settings -->
-	<fieldset name="advanced">
-		<field
-			name="db_prefix"
-			type="alpha.prefix"
-			label="TXT_DATABASE_PREFIX_DESC"
-			id="db_prefix"
-			class="form-control"
-			required="true"
-			validate="prefix"
-			message="TXT_DATABASE_PREFIX_MSG"
-			autocomplete="off"
-		/>
-		<field
-			name="db_old"
-			type="hidden"
-			id="db_old"
-			default="backup"
 		/>
 	</fieldset>
 </form>

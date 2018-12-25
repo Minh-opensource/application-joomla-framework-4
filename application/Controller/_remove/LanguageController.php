@@ -18,7 +18,7 @@ use Joomla\CMS\Language\Text;
 use Joomla\CMS\Table\Table;
 
 /**
- * Language controller class for the Joomla Installer.
+ * Language controller class for the Joomla Alpha Application.
  *
  * @since  3.1
  */

@@ -25,7 +25,7 @@ use Joomla\CMS\Updater\Update;
 use Joomla\CMS\Updater\Updater;
 
 /**
- * Language Installer model for the Joomla Core Installer.
+ * Language Alpha Application model for the Joomla Core Installer.
  *
  * @since  3.1
  */

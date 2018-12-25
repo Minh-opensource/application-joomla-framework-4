@@ -16,7 +16,7 @@ use Joomla\CMS\Language\Text;
 use Joomla\CMS\Session\Session;
 
 /**
- * JSON Response class for the Joomla Installer.
+ * JSON Response class for the Joomla Alpha Application.
  *
  * @since  3.1
  */

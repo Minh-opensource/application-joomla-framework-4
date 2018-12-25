@@ -16,7 +16,7 @@ use Joomla\CMS\Form\Form;
 use Joomla\CMS\Language\Text;
 
 /**
- * Checks model for the Joomla Core Installer.
+ * Checks model for the Joomla Core Alpha Application.
  *
  * @since  4.0.0
  */

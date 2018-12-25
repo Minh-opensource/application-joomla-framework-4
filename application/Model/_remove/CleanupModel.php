@@ -15,7 +15,7 @@ use Joomla\CMS\Filesystem\File;
 use Joomla\CMS\Filesystem\Folder;
 
 /**
- * Cleanup model for the Joomla Core Installer.
+ * Cleanup model for the Joomla Core Alpha Application.
  *
  * @since  4.0.0
  */

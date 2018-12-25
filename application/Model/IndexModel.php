@@ -19,14 +19,14 @@ use Joomla\CMS\Language\Text;
 use Joomla\Utilities\ArrayHelper;
 
 /**
- * Setup model for the Joomla Core Installer.
+ * info model for the Joomla Core Alpha Application.
  *
  * @since  3.1
  */
 class IndexModel extends BaseAlphaModel
 {
 	/**
-	 * Get the current setup options from the session.
+	 * Get the current info options from the session.
 	 *
 	 * @return  array  An array of options from the session.
 	 *
@@ -34,14 +34,14 @@ class IndexModel extends BaseAlphaModel
 	 */
 	public function getOptions()
 	{
-		if (!empty(Factory::getSession()->get('setup.options', array())))
+		if (!empty(Factory::getSession()->get('info.options', array())))
 		{
-			return Factory::getSession()->get('setup.options', array());
+			return Factory::getSession()->get('info.options', array());
 		}
 	}
 
 	/**
-	 * Store the current setup options in the session.
+	 * Store the current info options in the session.
 	 *
 	 * @param   array  $options  The alpha options.
 	 *
@@ -51,7 +51,7 @@ class IndexModel extends BaseAlphaModel
 	 */
 	public function storeOptions($options)
 	{
-		// Get the current setup options from the session.
+		// Get the current info options from the session.
 		$old = (array) $this->getOptions();
 
 		// Ensure that we have language
@@ -62,11 +62,11 @@ class IndexModel extends BaseAlphaModel
 
 		// Get the session
 		$session = Factory::getSession();
-		$options['helpurl'] = $session->get('setup.helpurl', null);
+		$options['helpurl'] = $session->get('info.helpurl', null);
 
-		// Merge the new setup options into the current ones and store in the session.
+		// Merge the new info options into the current ones and store in the session.
 		$options = array_merge($old, (array) $options);
-		$session->set('setup.options', $options);
+		$session->set('info.options', $options);
 
 		return $options;
 	}
